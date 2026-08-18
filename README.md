@@ -1,8 +1,8 @@
 <div align="center">
 
-# ⚡ PowerPulse
+# ⚡ PowerPulse 
 
-**IoT-Based Energy Monitoring & Visualization Platform for Multifunction Meters**
+**IoT-Based Energy Monitoring & Visualization Platform for Multifunction Meters**    
 
 [![AWS IoT Core](https://img.shields.io/badge/AWS-IoT_Core-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/iot-core/)
 [![DynamoDB](https://img.shields.io/badge/DynamoDB-NoSQL-4053D6?style=flat-square&logo=amazon-dynamodb&logoColor=white)](https://aws.amazon.com/dynamodb/)
@@ -15,6 +15,7 @@
 [![Award](https://img.shields.io/badge/🏆_Award-Consolation_Prize_·_M--Pulse_2026-gold?style=flat-square)](https://pesmodern.edu.in/)
 [![SDG 7](https://img.shields.io/badge/UN_SDG-7_·_9_·_11_·_13-yellow?style=flat-square)](https://sdgs.un.org/goals/goal7)
 
+[![GitHub Stars](https://img.shields.io/github/stars/mayurvaidya-mmv/PowerPulse)](https://github.com/mayurvaidya-mmv)
 > Real-time dual-source energy monitoring, AI-powered audit reports, and automated alerting — deployed live on campus infrastructure via AWS.
 
 🎥 **[Watch Demo](#-demo)** · 📸 **[Screenshots](#-dashboard--screenshots)** · ☁️ **[Architecture](#-cloud-architecture)** · 📄 **[Publication](#-research-publication)**
