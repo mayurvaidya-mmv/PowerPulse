@@ -1,0 +1,88 @@
+import { Command as $Command } from "@smithy/smithy-client";
+import type { MetadataBearer as __MetadataBearer } from "@smithy/types";
+import type { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
+import type { DeleteCoipPoolRequest, DeleteCoipPoolResult } from "../models/models_2";
+/**
+ * @public
+ */
+export type { __MetadataBearer };
+export { $Command };
+/**
+ * @public
+ *
+ * The input for {@link DeleteCoipPoolCommand}.
+ */
+export interface DeleteCoipPoolCommandInput extends DeleteCoipPoolRequest {
+}
+/**
+ * @public
+ *
+ * The output of {@link DeleteCoipPoolCommand}.
+ */
+export interface DeleteCoipPoolCommandOutput extends DeleteCoipPoolResult, __MetadataBearer {
+}
+declare const DeleteCoipPoolCommand_base: {
+    new (input: DeleteCoipPoolCommandInput): import("@smithy/smithy-client").CommandImpl<DeleteCoipPoolCommandInput, DeleteCoipPoolCommandOutput, EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes>;
+    new (input: DeleteCoipPoolCommandInput): import("@smithy/smithy-client").CommandImpl<DeleteCoipPoolCommandInput, DeleteCoipPoolCommandOutput, EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes>;
+    getEndpointParameterInstructions(): import("@smithy/middleware-endpoint").EndpointParameterInstructions;
+};
+/**
+ * <p>Deletes a pool of customer-owned IP (CoIP) addresses. </p>
+ * @example
+ * Use a bare-bones client and the command you need to make an API call.
+ * ```javascript
+ * import { EC2Client, DeleteCoipPoolCommand } from "@aws-sdk/client-ec2"; // ES Modules import
+ * // const { EC2Client, DeleteCoipPoolCommand } = require("@aws-sdk/client-ec2"); // CommonJS import
+ * // import type { EC2ClientConfig } from "@aws-sdk/client-ec2";
+ * const config = {}; // type is EC2ClientConfig
+ * const client = new EC2Client(config);
+ * const input = { // DeleteCoipPoolRequest
+ *   CoipPoolId: "STRING_VALUE", // required
+ *   DryRun: true || false,
+ * };
+ * const command = new DeleteCoipPoolCommand(input);
+ * const response = await client.send(command);
+ * // { // DeleteCoipPoolResult
+ * //   CoipPool: { // CoipPool
+ * //     PoolId: "STRING_VALUE",
+ * //     PoolCidrs: [ // ValueStringList
+ * //       "STRING_VALUE",
+ * //     ],
+ * //     LocalGatewayRouteTableId: "STRING_VALUE",
+ * //     Tags: [ // TagList
+ * //       { // Tag
+ * //         Key: "STRING_VALUE",
+ * //         Value: "STRING_VALUE",
+ * //       },
+ * //     ],
+ * //     PoolArn: "STRING_VALUE",
+ * //   },
+ * // };
+ *
+ * ```
+ *
+ * @param DeleteCoipPoolCommandInput - {@link DeleteCoipPoolCommandInput}
+ * @returns {@link DeleteCoipPoolCommandOutput}
+ * @see {@link DeleteCoipPoolCommandInput} for command's `input` shape.
+ * @see {@link DeleteCoipPoolCommandOutput} for command's `response` shape.
+ * @see {@link EC2ClientResolvedConfig | config} for EC2Client's `config` shape.
+ *
+ * @throws {@link EC2ServiceException}
+ * <p>Base exception class for all service exceptions from EC2 service.</p>
+ *
+ *
+ * @public
+ */
+export declare class DeleteCoipPoolCommand extends DeleteCoipPoolCommand_base {
+    /** @internal type navigation helper, not in runtime. */
+    protected static __types: {
+        api: {
+            input: DeleteCoipPoolRequest;
+            output: DeleteCoipPoolResult;
+        };
+        sdk: {
+            input: DeleteCoipPoolCommandInput;
+            output: DeleteCoipPoolCommandOutput;
+        };
+    };
+}

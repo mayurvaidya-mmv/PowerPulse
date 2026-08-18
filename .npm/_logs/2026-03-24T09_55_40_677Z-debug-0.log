@@ -1,0 +1,718 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.1
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/ec2-user/powerpulse/.npmrc
+5 silly config load:file:/home/ec2-user/.npmrc
+6 silly config load:file:/usr/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/home/ec2-user/.npm/_logs/2026-03-24T09_55_40_677Z-
+10 verbose logfile /home/ec2-user/.npm/_logs/2026-03-24T09_55_40_677Z-debug-0.log
+11 silly packumentCache heap:495452160 maxSize:123863040 maxEntrySize:61931520
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly reify moves {}
+15 silly audit bulk request {
+15 silly audit   '@aws-crypto/crc32': [ '5.2.0' ],
+15 silly audit   '@aws-crypto/sha256-browser': [ '5.2.0' ],
+15 silly audit   '@smithy/is-array-buffer': [ '2.2.0', '4.2.2' ],
+15 silly audit   '@smithy/util-buffer-from': [ '2.2.0', '4.2.2' ],
+15 silly audit   '@smithy/util-utf8': [ '2.3.0', '4.2.2' ],
+15 silly audit   '@aws-crypto/sha256-js': [ '5.2.0' ],
+15 silly audit   '@aws-crypto/supports-web-crypto': [ '5.2.0' ],
+15 silly audit   '@aws-crypto/util': [ '5.2.0' ],
+15 silly audit   '@aws-sdk/client-bedrock-runtime': [ '3.1014.0' ],
+15 silly audit   '@aws-sdk/client-dynamodb': [ '3.1014.0' ],
+15 silly audit   '@aws-sdk/client-ec2': [ '3.1009.0' ],
+15 silly audit   '@aws-sdk/client-lambda': [ '3.1009.0' ],
+15 silly audit   '@aws-sdk/client-sns': [ '3.1009.0' ],
+15 silly audit   '@aws-sdk/core': [ '3.973.23' ],
+15 silly audit   '@aws-sdk/credential-provider-env': [ '3.972.21' ],
+15 silly audit   '@aws-sdk/credential-provider-http': [ '3.972.23' ],
+15 silly audit   '@aws-sdk/credential-provider-ini': [ '3.972.23' ],
+15 silly audit   '@aws-sdk/credential-provider-login': [ '3.972.23' ],
+15 silly audit   '@aws-sdk/credential-provider-node': [ '3.972.24' ],
+15 silly audit   '@aws-sdk/credential-provider-process': [ '3.972.21' ],
+15 silly audit   '@aws-sdk/credential-provider-sso': [ '3.972.23' ],
+15 silly audit   '@aws-sdk/credential-provider-web-identity': [ '3.972.23' ],
+15 silly audit   '@aws-sdk/dynamodb-codec': [ '3.972.24' ],
+15 silly audit   '@aws-sdk/endpoint-cache': [ '3.972.4' ],
+15 silly audit   '@aws-sdk/eventstream-handler-node': [ '3.972.11' ],
+15 silly audit   '@aws-sdk/lib-dynamodb': [ '3.1008.0' ],
+15 silly audit   '@aws-sdk/middleware-endpoint-discovery': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/middleware-eventstream': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/middleware-host-header': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/middleware-logger': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/middleware-recursion-detection': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/middleware-sdk-ec2': [ '3.972.15' ],
+15 silly audit   '@aws-sdk/middleware-user-agent': [ '3.972.24' ],
+15 silly audit   '@aws-sdk/middleware-websocket': [ '3.972.13' ],
+15 silly audit   '@aws-sdk/nested-clients': [ '3.996.13' ],
+15 silly audit   '@aws-sdk/region-config-resolver': [ '3.972.9' ],
+15 silly audit   '@aws-sdk/token-providers': [ '3.1014.0' ],
+15 silly audit   '@aws-sdk/types': [ '3.973.6' ],
+15 silly audit   '@aws-sdk/util-dynamodb': [ '3.996.2' ],
+15 silly audit   '@aws-sdk/util-endpoints': [ '3.996.5' ],
+15 silly audit   '@aws-sdk/util-format-url': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/util-locate-window': [ '3.965.5' ],
+15 silly audit   '@aws-sdk/util-user-agent-browser': [ '3.972.8' ],
+15 silly audit   '@aws-sdk/util-user-agent-node': [ '3.973.10' ],
+15 silly audit   '@aws-sdk/xml-builder': [ '3.972.15' ],
+15 silly audit   '@aws/lambda-invoke-store': [ '0.2.4' ],
+15 silly audit   '@babel/code-frame': [ '7.29.0' ],
+15 silly audit   '@babel/generator': [ '7.29.1' ],
+15 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+15 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+15 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+15 silly audit   '@babel/parser': [ '7.29.0' ],
+15 silly audit   '@babel/runtime': [ '7.28.6' ],
+15 silly audit   '@babel/template': [ '7.28.6' ],
+15 silly audit   '@babel/traverse': [ '7.29.0' ],
+15 silly audit   debug: [ '4.4.3', '2.6.9' ],
+15 silly audit   ms: [ '2.1.3', '2.0.0' ],
+15 silly audit   '@babel/types': [ '7.29.0' ],
+15 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+15 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+15 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+15 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+15 silly audit   '@smithy/abort-controller': [ '4.2.12' ],
+15 silly audit   '@smithy/config-resolver': [ '4.4.13' ],
+15 silly audit   '@smithy/core': [ '3.23.12' ],
+15 silly audit   '@smithy/credential-provider-imds': [ '4.2.12' ],
+15 silly audit   '@smithy/eventstream-codec': [ '4.2.12' ],
+15 silly audit   '@smithy/eventstream-serde-browser': [ '4.2.12' ],
+15 silly audit   '@smithy/eventstream-serde-config-resolver': [ '4.3.12' ],
+15 silly audit   '@smithy/eventstream-serde-node': [ '4.2.12' ],
+15 silly audit   '@smithy/eventstream-serde-universal': [ '4.2.12' ],
+15 silly audit   '@smithy/fetch-http-handler': [ '5.3.15' ],
+15 silly audit   '@smithy/hash-node': [ '4.2.12' ],
+15 silly audit   '@smithy/invalid-dependency': [ '4.2.12' ],
+15 silly audit   '@smithy/middleware-content-length': [ '4.2.12' ],
+15 silly audit   '@smithy/middleware-endpoint': [ '4.4.27' ],
+15 silly audit   '@smithy/middleware-retry': [ '4.4.44' ],
+15 silly audit   '@smithy/middleware-serde': [ '4.2.15' ],
+15 silly audit   '@smithy/middleware-stack': [ '4.2.12' ],
+15 silly audit   '@smithy/node-config-provider': [ '4.3.12' ],
+15 silly audit   '@smithy/node-http-handler': [ '4.5.0' ],
+15 silly audit   '@smithy/property-provider': [ '4.2.12' ],
+15 silly audit   '@smithy/protocol-http': [ '5.3.12' ],
+15 silly audit   '@smithy/querystring-builder': [ '4.2.12' ],
+15 silly audit   '@smithy/querystring-parser': [ '4.2.12' ],
+15 silly audit   '@smithy/service-error-classification': [ '4.2.12' ],
+15 silly audit   '@smithy/shared-ini-file-loader': [ '4.4.7' ],
+15 silly audit   '@smithy/signature-v4': [ '5.3.12' ],
+15 silly audit   '@smithy/smithy-client': [ '4.12.7' ],
+15 silly audit   '@smithy/types': [ '4.13.1' ],
+15 silly audit   '@smithy/url-parser': [ '4.2.12' ],
+15 silly audit   '@smithy/util-base64': [ '4.3.2' ],
+15 silly audit   '@smithy/util-body-length-browser': [ '4.2.2' ],
+15 silly audit   '@smithy/util-body-length-node': [ '4.2.3' ],
+15 silly audit   '@smithy/util-config-provider': [ '4.2.2' ],
+15 silly audit   '@smithy/util-defaults-mode-browser': [ '4.3.43' ],
+15 silly audit   '@smithy/util-defaults-mode-node': [ '4.2.47' ],
+15 silly audit   '@smithy/util-endpoints': [ '3.3.3' ],
+15 silly audit   '@smithy/util-hex-encoding': [ '4.2.2' ],
+15 silly audit   '@smithy/util-middleware': [ '4.2.12' ],
+15 silly audit   '@smithy/util-retry': [ '4.2.12' ],
+15 silly audit   '@smithy/util-stream': [ '4.5.20' ],
+15 silly audit   '@smithy/util-uri-escape': [ '4.2.2' ],
+15 silly audit   '@smithy/util-waiter': [ '4.2.13' ],
+15 silly audit   '@smithy/uuid': [ '1.1.2' ],
+15 silly audit   '@types/minimatch': [ '3.0.5' ],
+15 silly audit   '@types/node': [ '25.4.0' ],
+15 silly audit   '@types/parse-json': [ '4.0.2' ],
+15 silly audit   '@types/readable-stream': [ '4.0.23' ],
+15 silly audit   '@types/ws': [ '8.18.1' ],
+15 silly audit   '@vue/compiler-core': [ '3.5.30' ],
+15 silly audit   '@vue/compiler-dom': [ '3.5.30' ],
+15 silly audit   '@vue/compiler-sfc': [ '3.5.30' ],
+15 silly audit   '@vue/compiler-ssr': [ '3.5.30' ],
+15 silly audit   '@vue/shared': [ '3.5.30' ],
+15 silly audit   'abort-controller': [ '3.0.0' ],
+15 silly audit   accepts: [ '1.3.8' ],
+15 silly audit   'ansi-regex': [ '5.0.1' ],
+15 silly audit   'ansi-styles': [ '4.3.0' ],
+15 silly audit   argparse: [ '1.0.10' ],
+15 silly audit   'array-differ': [ '3.0.0' ],
+15 silly audit   'array-flatten': [ '1.1.1' ],
+15 silly audit   'array-union': [ '2.1.0' ],
+15 silly audit   arrify: [ '2.0.1' ],
+15 silly audit   asynckit: [ '0.4.0' ],
+15 silly audit   axios: [ '1.13.6' ],
+15 silly audit   'balanced-match': [ '1.0.2' ],
+15 silly audit   'base64-js': [ '1.5.1' ],
+15 silly audit   bcryptjs: [ '2.4.3' ],
+15 silly audit   bl: [ '6.1.6' ],
+15 silly audit   'body-parser': [ '1.20.4' ],
+15 silly audit   'http-errors': [ '2.0.1', '2.0.0' ],
+15 silly audit   statuses: [ '2.0.2', '2.0.1' ],
+15 silly audit   bowser: [ '2.14.1' ],
+15 silly audit   'brace-expansion': [ '2.0.2', '1.1.12' ],
+15 silly audit   braces: [ '3.0.3' ],
+15 silly audit   'broker-factory': [ '3.1.13' ],
+15 silly audit   buffer: [ '6.0.3' ],
+15 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+15 silly audit   'buffer-from': [ '1.1.2' ],
+15 silly audit   bytes: [ '3.1.2' ],
+15 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+15 silly audit   'call-bound': [ '1.0.4' ],
+15 silly audit   callsite: [ '1.0.0' ],
+15 silly audit   callsites: [ '3.1.0' ],
+15 silly audit   camelcase: [ '6.3.0' ],
+15 silly audit   cliui: [ '7.0.4' ],
+15 silly audit   'color-convert': [ '2.0.1' ],
+15 silly audit   'color-name': [ '1.1.4' ],
+15 silly audit   'combined-stream': [ '1.0.8' ],
+15 silly audit   commist: [ '3.2.0' ],
+15 silly audit   'concat-map': [ '0.0.1' ],
+15 silly audit   'concat-stream': [ '2.0.0' ],
+15 silly audit   'readable-stream': [ '3.6.2', '4.7.0' ],
+15 silly audit   'content-disposition': [ '0.5.4' ],
+15 silly audit   'content-type': [ '1.0.5' ],
+15 silly audit   cookie: [ '0.7.2' ],
+15 silly audit   'cookie-parser': [ '1.4.7' ],
+15 silly audit   'cookie-signature': [ '1.0.6' ],
+15 silly audit   cosmiconfig: [ '7.1.0' ],
+15 silly audit   'delayed-stream': [ '1.0.0' ],
+15 silly audit   depcheck: [ '1.4.7' ],
+15 silly audit   depd: [ '2.0.0' ],
+15 silly audit   'deps-regex': [ '0.2.0' ],
+15 silly audit   destroy: [ '1.2.0' ],
+15 silly audit   'detect-file': [ '1.0.0' ],
+15 silly audit   dotenv: [ '16.4.7' ],
+15 silly audit   'dunder-proto': [ '1.0.1' ],
+15 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+15 silly audit   'ee-first': [ '1.1.1' ],
+15 silly audit   'emoji-regex': [ '8.0.0' ],
+15 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+15 silly audit   entities: [ '7.0.1' ],
+15 silly audit   'error-ex': [ '1.3.4' ],
+15 silly audit   'es-define-property': [ '1.0.1' ],
+15 silly audit   'es-errors': [ '1.3.0' ],
+15 silly audit   'es-object-atoms': [ '1.1.1' ],
+15 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+15 silly audit   escalade: [ '3.2.0' ],
+15 silly audit   'escape-html': [ '1.0.3' ],
+15 silly audit   esprima: [ '4.0.1' ],
+15 silly audit   'estree-walker': [ '2.0.2' ],
+15 silly audit   etag: [ '1.8.1' ],
+15 silly audit   'event-target-shim': [ '5.0.1' ],
+15 silly audit   events: [ '3.3.0' ],
+15 silly audit   'expand-tilde': [ '2.0.2' ],
+15 silly audit   express: [ '4.22.1' ],
+15 silly audit   'fast-unique-numbers': [ '9.0.26' ],
+15 silly audit   'fast-xml-builder': [ '1.1.4' ],
+15 silly audit   'fast-xml-parser': [ '5.5.8' ],
+15 silly audit   'fill-range': [ '7.1.1' ],
+15 silly audit   finalhandler: [ '1.3.1' ],
+15 silly audit   'findup-sync': [ '5.0.0' ],
+15 silly audit   'follow-redirects': [ '1.15.11' ],
+15 silly audit   'form-data': [ '4.0.5' ],
+15 silly audit   forwarded: [ '0.2.0' ],
+15 silly audit   fresh: [ '0.5.2' ],
+15 silly audit   'function-bind': [ '1.1.2' ],
+15 silly audit   'get-caller-file': [ '2.0.5' ],
+15 silly audit   'get-intrinsic': [ '1.3.0' ],
+15 silly audit   'get-proto': [ '1.0.1' ],
+15 silly audit   'global-modules': [ '1.0.0' ],
+15 silly audit   'global-prefix': [ '1.0.2' ],
+15 silly audit   gopd: [ '1.2.0' ],
+15 silly audit   'has-symbols': [ '1.1.0' ],
+15 silly audit   'has-tostringtag': [ '1.0.2' ],
+15 silly audit   hasown: [ '2.0.2' ],
+15 silly audit   'help-me': [ '5.0.0' ],
+15 silly audit   'homedir-polyfill': [ '1.0.3' ],
+15 silly audit   'iconv-lite': [ '0.4.24' ],
+15 silly audit   ieee754: [ '1.2.1' ],
+15 silly audit   ignore: [ '5.3.2' ],
+15 silly audit   'import-fresh': [ '3.3.1' ],
+15 silly audit   'resolve-from': [ '4.0.0', '5.0.0' ],
+15 silly audit   inherits: [ '2.0.4' ],
+15 silly audit   ini: [ '1.3.8' ],
+15 silly audit   'ip-address': [ '10.1.0' ],
+15 silly audit   'ipaddr.js': [ '1.9.1' ],
+15 silly audit   'is-arrayish': [ '0.2.1' ],
+15 silly audit   'is-core-module': [ '2.16.1' ],
+15 silly audit   'is-extglob': [ '2.1.1' ],
+15 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+15 silly audit   'is-glob': [ '4.0.3' ],
+15 silly audit   'is-number': [ '7.0.0' ],
+15 silly audit   'is-windows': [ '1.0.2' ],
+15 silly audit   isexe: [ '2.0.0' ],
+15 silly audit   'js-sdsl': [ '4.3.0' ],
+15 silly audit   'js-tokens': [ '4.0.0' ],
+15 silly audit   'js-yaml': [ '3.14.2' ],
+15 silly audit   jsesc: [ '3.1.0' ],
+15 silly audit   'json-parse-even-better-errors': [ '2.3.1' ],
+15 silly audit   json5: [ '2.2.3' ],
+15 silly audit   jsonwebtoken: [ '9.0.3' ],
+15 silly audit   jwa: [ '2.0.1' ],
+15 silly audit   jws: [ '4.0.1' ],
+15 silly audit   'lines-and-columns': [ '1.2.4' ],
+15 silly audit   lodash: [ '4.17.23' ],
+15 silly audit   'lodash.includes': [ '4.3.0' ],
+15 silly audit   'lodash.isboolean': [ '3.0.3' ],
+15 silly audit   'lodash.isinteger': [ '4.0.4' ],
+15 silly audit   'lodash.isnumber': [ '3.0.3' ],
+15 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+15 silly audit   'lodash.isstring': [ '4.0.1' ],
+15 silly audit   'lodash.once': [ '4.1.1' ],
+15 silly audit   'lru-cache': [ '10.4.3' ],
+15 silly audit   'magic-string': [ '0.30.21' ],
+15 silly audit   'math-intrinsics': [ '1.1.0' ],
+15 silly audit   'media-typer': [ '0.3.0' ],
+15 silly audit   'merge-descriptors': [ '1.0.3' ],
+15 silly audit   methods: [ '1.1.2' ],
+15 silly audit   micromatch: [ '4.0.8' ],
+15 silly audit   mime: [ '1.6.0' ],
+15 silly audit   'mime-db': [ '1.52.0' ],
+15 silly audit   'mime-types': [ '2.1.35' ],
+15 silly audit   minimatch: [ '7.4.9', '3.1.5' ],
+15 silly audit   minimist: [ '1.2.8' ],
+15 silly audit   mnemonist: [ '0.38.3' ],
+15 silly audit   mqtt: [ '5.15.0' ],
+15 silly audit   'mqtt-packet': [ '9.0.2' ],
+15 silly audit   multimatch: [ '5.0.0' ],
+15 silly audit   nanoid: [ '3.3.11' ],
+15 silly audit   negotiator: [ '0.6.3' ],
+15 silly audit   'number-allocator': [ '1.0.14' ],
+15 silly audit   'object-inspect': [ '1.13.4' ],
+15 silly audit   obliterator: [ '1.6.1' ],
+15 silly audit   'on-finished': [ '2.4.1' ],
+15 silly audit   'parent-module': [ '1.0.1' ],
+15 silly audit   'parse-json': [ '5.2.0' ],
+15 silly audit   'parse-passwd': [ '1.0.0' ],
+15 silly audit   parseurl: [ '1.3.3' ],
+15 silly audit   'path-expression-matcher': [ '1.2.0' ],
+15 silly audit   'path-parse': [ '1.0.7' ],
+15 silly audit   'path-to-regexp': [ '0.1.12' ],
+15 silly audit   'path-type': [ '4.0.0' ],
+15 silly audit   picocolors: [ '1.1.1' ],
+15 silly audit   picomatch: [ '2.3.1' ],
+15 silly audit   'please-upgrade-node': [ '3.2.0' ],
+15 silly audit   postcss: [ '8.5.8' ],
+15 silly audit   process: [ '0.11.10' ],
+15 silly audit   'process-nextick-args': [ '2.0.1' ],
+15 silly audit   'proxy-addr': [ '2.0.7' ],
+15 silly audit   'proxy-from-env': [ '1.1.0' ],
+15 silly audit   qs: [ '6.14.2' ],
+15 silly audit   'range-parser': [ '1.2.1' ],
+15 silly audit   'raw-body': [ '2.5.3' ],
+15 silly audit   readdirp: [ '3.6.0' ],
+15 silly audit   'require-directory': [ '2.1.1' ],
+15 silly audit   'require-package-name': [ '2.0.1' ],
+15 silly audit   resolve: [ '1.22.11' ],
+15 silly audit   'resolve-dir': [ '1.0.1' ],
+15 silly audit   rfdc: [ '1.4.1' ],
+15 silly audit   'safe-buffer': [ '5.2.1' ],
+15 silly audit   'safer-buffer': [ '2.1.2' ],
+15 silly audit   semver: [ '7.7.4' ],
+15 silly audit   'semver-compare': [ '1.0.0' ],
+15 silly audit   send: [ '0.19.0' ],
+15 silly audit   'serve-static': [ '1.16.2' ],
+15 silly audit   setprototypeof: [ '1.2.0' ],
+15 silly audit   'side-channel': [ '1.1.0' ],
+15 silly audit   'side-channel-list': [ '1.0.0' ],
+15 silly audit   'side-channel-map': [ '1.0.1' ],
+15 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+15 silly audit   'smart-buffer': [ '4.2.0' ],
+15 silly audit   socks: [ '2.8.7' ],
+15 silly audit   'source-map-js': [ '1.2.1' ],
+15 silly audit   split2: [ '4.2.0' ],
+15 silly audit   'sprintf-js': [ '1.0.3' ],
+15 silly audit   string_decoder: [ '1.3.0' ],
+15 silly audit   'string-width': [ '4.2.3' ],
+15 silly audit   'strip-ansi': [ '6.0.1' ],
+15 silly audit   strnum: [ '2.2.1' ],
+15 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+15 silly audit   'to-regex-range': [ '5.0.1' ],
+15 silly audit   toidentifier: [ '1.0.1' ],
+15 silly audit   tslib: [ '2.8.1' ],
+15 silly audit   'type-is': [ '1.6.18' ],
+15 silly audit   typedarray: [ '0.0.6' ],
+15 silly audit   'undici-types': [ '7.18.2' ],
+15 silly audit   unpipe: [ '1.0.0' ],
+15 silly audit   'util-deprecate': [ '1.0.2' ],
+15 silly audit   'utils-merge': [ '1.0.1' ],
+15 silly audit   vary: [ '1.1.2' ],
+15 silly audit   which: [ '1.3.1' ],
+15 silly audit   'worker-factory': [ '7.0.48' ],
+15 silly audit   'worker-timers': [ '8.0.30' ],
+15 silly audit   'worker-timers-broker': [ '8.0.15' ],
+15 silly audit   'worker-timers-worker': [ '9.0.13' ],
+15 silly audit   'wrap-ansi': [ '7.0.0' ],
+15 silly audit   ws: [ '8.19.0' ],
+15 silly audit   y18n: [ '5.0.8' ],
+15 silly audit   yaml: [ '1.10.2' ],
+15 silly audit   yargs: [ '16.2.0' ],
+15 silly audit   'yargs-parser': [ '20.2.9' ]
+15 silly audit }
+16 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1788ms
+17 silly audit report {}
+18 silly ADD node_modules/yargs-parser
+19 silly ADD node_modules/yargs
+20 silly ADD node_modules/yaml
+21 silly ADD node_modules/y18n
+22 silly ADD node_modules/ws
+23 silly ADD node_modules/wrap-ansi
+24 silly ADD node_modules/worker-timers-worker
+25 silly ADD node_modules/worker-timers-broker
+26 silly ADD node_modules/worker-timers
+27 silly ADD node_modules/worker-factory
+28 silly ADD node_modules/which
+29 silly ADD node_modules/vary
+30 silly ADD node_modules/utils-merge
+31 silly ADD node_modules/util-deprecate
+32 silly ADD node_modules/unpipe
+33 silly ADD node_modules/undici-types
+34 silly ADD node_modules/typedarray
+35 silly ADD node_modules/type-is
+36 silly ADD node_modules/tslib
+37 silly ADD node_modules/toidentifier
+38 silly ADD node_modules/to-regex-range
+39 silly ADD node_modules/supports-preserve-symlinks-flag
+40 silly ADD node_modules/strnum
+41 silly ADD node_modules/strip-ansi
+42 silly ADD node_modules/string-width
+43 silly ADD node_modules/string_decoder
+44 silly ADD node_modules/statuses
+45 silly ADD node_modules/sprintf-js
+46 silly ADD node_modules/split2
+47 silly ADD node_modules/source-map-js
+48 silly ADD node_modules/socks
+49 silly ADD node_modules/smart-buffer
+50 silly ADD node_modules/side-channel-weakmap
+51 silly ADD node_modules/side-channel-map
+52 silly ADD node_modules/side-channel-list
+53 silly ADD node_modules/side-channel
+54 silly ADD node_modules/setprototypeof
+55 silly ADD node_modules/serve-static
+56 silly ADD node_modules/send
+57 silly ADD node_modules/send/node_modules/ms
+58 silly ADD node_modules/send/node_modules/encodeurl
+59 silly ADD node_modules/semver-compare
+60 silly ADD node_modules/semver
+61 silly ADD node_modules/safer-buffer
+62 silly ADD node_modules/safe-buffer
+63 silly ADD node_modules/rfdc
+64 silly ADD node_modules/resolve-from
+65 silly ADD node_modules/resolve-dir
+66 silly ADD node_modules/resolve
+67 silly ADD node_modules/require-package-name
+68 silly ADD node_modules/require-directory
+69 silly ADD node_modules/readdirp
+70 silly ADD node_modules/readable-stream
+71 silly ADD node_modules/raw-body
+72 silly ADD node_modules/raw-body/node_modules/statuses
+73 silly ADD node_modules/raw-body/node_modules/http-errors
+74 silly ADD node_modules/range-parser
+75 silly ADD node_modules/qs
+76 silly ADD node_modules/proxy-from-env
+77 silly ADD node_modules/proxy-addr
+78 silly ADD node_modules/process-nextick-args
+79 silly ADD node_modules/process
+80 silly ADD node_modules/postcss
+81 silly ADD node_modules/please-upgrade-node
+82 silly ADD node_modules/picomatch
+83 silly ADD node_modules/picocolors
+84 silly ADD node_modules/path-type
+85 silly ADD node_modules/path-to-regexp
+86 silly ADD node_modules/path-parse
+87 silly ADD node_modules/path-expression-matcher
+88 silly ADD node_modules/parseurl
+89 silly ADD node_modules/parse-passwd
+90 silly ADD node_modules/parse-json
+91 silly ADD node_modules/parent-module
+92 silly ADD node_modules/on-finished
+93 silly ADD node_modules/obliterator
+94 silly ADD node_modules/object-inspect
+95 silly ADD node_modules/number-allocator
+96 silly ADD node_modules/number-allocator/node_modules/ms
+97 silly ADD node_modules/number-allocator/node_modules/debug
+98 silly ADD node_modules/negotiator
+99 silly ADD node_modules/nanoid
+100 silly ADD node_modules/multimatch
+101 silly ADD node_modules/multimatch/node_modules/minimatch
+102 silly ADD node_modules/multimatch/node_modules/brace-expansion
+103 silly ADD node_modules/ms
+104 silly ADD node_modules/mqtt-packet
+105 silly ADD node_modules/mqtt-packet/node_modules/ms
+106 silly ADD node_modules/mqtt-packet/node_modules/debug
+107 silly ADD node_modules/mqtt
+108 silly ADD node_modules/mqtt/node_modules/ms
+109 silly ADD node_modules/mqtt/node_modules/debug
+110 silly ADD node_modules/mnemonist
+111 silly ADD node_modules/minimist
+112 silly ADD node_modules/minimatch
+113 silly ADD node_modules/mime-types
+114 silly ADD node_modules/mime-db
+115 silly ADD node_modules/mime
+116 silly ADD node_modules/micromatch
+117 silly ADD node_modules/methods
+118 silly ADD node_modules/merge-descriptors
+119 silly ADD node_modules/media-typer
+120 silly ADD node_modules/math-intrinsics
+121 silly ADD node_modules/magic-string
+122 silly ADD node_modules/lru-cache
+123 silly ADD node_modules/lodash.once
+124 silly ADD node_modules/lodash.isstring
+125 silly ADD node_modules/lodash.isplainobject
+126 silly ADD node_modules/lodash.isnumber
+127 silly ADD node_modules/lodash.isinteger
+128 silly ADD node_modules/lodash.isboolean
+129 silly ADD node_modules/lodash.includes
+130 silly ADD node_modules/lodash
+131 silly ADD node_modules/lines-and-columns
+132 silly ADD node_modules/jws
+133 silly ADD node_modules/jwa
+134 silly ADD node_modules/jsonwebtoken
+135 silly ADD node_modules/jsonwebtoken/node_modules/ms
+136 silly ADD node_modules/json5
+137 silly ADD node_modules/json-parse-even-better-errors
+138 silly ADD node_modules/jsesc
+139 silly ADD node_modules/js-yaml
+140 silly ADD node_modules/js-tokens
+141 silly ADD node_modules/js-sdsl
+142 silly ADD node_modules/isexe
+143 silly ADD node_modules/is-windows
+144 silly ADD node_modules/is-number
+145 silly ADD node_modules/is-glob
+146 silly ADD node_modules/is-fullwidth-code-point
+147 silly ADD node_modules/is-extglob
+148 silly ADD node_modules/is-core-module
+149 silly ADD node_modules/is-arrayish
+150 silly ADD node_modules/ipaddr.js
+151 silly ADD node_modules/ip-address
+152 silly ADD node_modules/ini
+153 silly ADD node_modules/inherits
+154 silly ADD node_modules/import-fresh
+155 silly ADD node_modules/import-fresh/node_modules/resolve-from
+156 silly ADD node_modules/ignore
+157 silly ADD node_modules/ieee754
+158 silly ADD node_modules/iconv-lite
+159 silly ADD node_modules/http-errors
+160 silly ADD node_modules/homedir-polyfill
+161 silly ADD node_modules/help-me
+162 silly ADD node_modules/hasown
+163 silly ADD node_modules/has-tostringtag
+164 silly ADD node_modules/has-symbols
+165 silly ADD node_modules/gopd
+166 silly ADD node_modules/global-prefix
+167 silly ADD node_modules/global-modules
+168 silly ADD node_modules/get-proto
+169 silly ADD node_modules/get-intrinsic
+170 silly ADD node_modules/get-caller-file
+171 silly ADD node_modules/function-bind
+172 silly ADD node_modules/fresh
+173 silly ADD node_modules/forwarded
+174 silly ADD node_modules/form-data
+175 silly ADD node_modules/follow-redirects
+176 silly ADD node_modules/findup-sync
+177 silly ADD node_modules/finalhandler
+178 silly ADD node_modules/fill-range
+179 silly ADD node_modules/fast-xml-parser
+180 silly ADD node_modules/fast-xml-builder
+181 silly ADD node_modules/fast-unique-numbers
+182 silly ADD node_modules/express
+183 silly ADD node_modules/expand-tilde
+184 silly ADD node_modules/events
+185 silly ADD node_modules/event-target-shim
+186 silly ADD node_modules/etag
+187 silly ADD node_modules/estree-walker
+188 silly ADD node_modules/esprima
+189 silly ADD node_modules/escape-html
+190 silly ADD node_modules/escalade
+191 silly ADD node_modules/es-set-tostringtag
+192 silly ADD node_modules/es-object-atoms
+193 silly ADD node_modules/es-errors
+194 silly ADD node_modules/es-define-property
+195 silly ADD node_modules/error-ex
+196 silly ADD node_modules/entities
+197 silly ADD node_modules/encodeurl
+198 silly ADD node_modules/emoji-regex
+199 silly ADD node_modules/ee-first
+200 silly ADD node_modules/ecdsa-sig-formatter
+201 silly ADD node_modules/dunder-proto
+202 silly ADD node_modules/dotenv
+203 silly ADD node_modules/detect-file
+204 silly ADD node_modules/destroy
+205 silly ADD node_modules/deps-regex
+206 silly ADD node_modules/depd
+207 silly ADD node_modules/depcheck
+208 silly ADD node_modules/depcheck/node_modules/ms
+209 silly ADD node_modules/depcheck/node_modules/debug
+210 silly ADD node_modules/delayed-stream
+211 silly ADD node_modules/debug
+212 silly ADD node_modules/cosmiconfig
+213 silly ADD node_modules/cookie-signature
+214 silly ADD node_modules/cookie-parser
+215 silly ADD node_modules/cookie
+216 silly ADD node_modules/content-type
+217 silly ADD node_modules/content-disposition
+218 silly ADD node_modules/concat-stream
+219 silly ADD node_modules/concat-stream/node_modules/readable-stream
+220 silly ADD node_modules/concat-map
+221 silly ADD node_modules/commist
+222 silly ADD node_modules/combined-stream
+223 silly ADD node_modules/color-name
+224 silly ADD node_modules/color-convert
+225 silly ADD node_modules/cliui
+226 silly ADD node_modules/camelcase
+227 silly ADD node_modules/callsites
+228 silly ADD node_modules/callsite
+229 silly ADD node_modules/call-bound
+230 silly ADD node_modules/call-bind-apply-helpers
+231 silly ADD node_modules/bytes
+232 silly ADD node_modules/buffer-from
+233 silly ADD node_modules/buffer-equal-constant-time
+234 silly ADD node_modules/buffer
+235 silly ADD node_modules/broker-factory
+236 silly ADD node_modules/braces
+237 silly ADD node_modules/brace-expansion
+238 silly ADD node_modules/bowser
+239 silly ADD node_modules/body-parser
+240 silly ADD node_modules/body-parser/node_modules/statuses
+241 silly ADD node_modules/body-parser/node_modules/http-errors
+242 silly ADD node_modules/bl
+243 silly ADD node_modules/bcryptjs
+244 silly ADD node_modules/base64-js
+245 silly ADD node_modules/balanced-match
+246 silly ADD node_modules/axios
+247 silly ADD node_modules/asynckit
+248 silly ADD node_modules/arrify
+249 silly ADD node_modules/array-union
+250 silly ADD node_modules/array-flatten
+251 silly ADD node_modules/array-differ
+252 silly ADD node_modules/argparse
+253 silly ADD node_modules/ansi-styles
+254 silly ADD node_modules/ansi-regex
+255 silly ADD node_modules/accepts
+256 silly ADD node_modules/abort-controller
+257 silly ADD node_modules/@vue/shared
+258 silly ADD node_modules/@vue/compiler-ssr
+259 silly ADD node_modules/@vue/compiler-sfc
+260 silly ADD node_modules/@vue/compiler-dom
+261 silly ADD node_modules/@vue/compiler-core
+262 silly ADD node_modules/@types/ws
+263 silly ADD node_modules/@types/readable-stream
+264 silly ADD node_modules/@types/parse-json
+265 silly ADD node_modules/@types/node
+266 silly ADD node_modules/@types/minimatch
+267 silly ADD node_modules/@smithy/uuid
+268 silly ADD node_modules/@smithy/util-waiter
+269 silly ADD node_modules/@smithy/util-utf8
+270 silly ADD node_modules/@smithy/util-uri-escape
+271 silly ADD node_modules/@smithy/util-stream
+272 silly ADD node_modules/@smithy/util-retry
+273 silly ADD node_modules/@smithy/util-middleware
+274 silly ADD node_modules/@smithy/util-hex-encoding
+275 silly ADD node_modules/@smithy/util-endpoints
+276 silly ADD node_modules/@smithy/util-defaults-mode-node
+277 silly ADD node_modules/@smithy/util-defaults-mode-browser
+278 silly ADD node_modules/@smithy/util-config-provider
+279 silly ADD node_modules/@smithy/util-buffer-from
+280 silly ADD node_modules/@smithy/util-body-length-node
+281 silly ADD node_modules/@smithy/util-body-length-browser
+282 silly ADD node_modules/@smithy/util-base64
+283 silly ADD node_modules/@smithy/url-parser
+284 silly ADD node_modules/@smithy/types
+285 silly ADD node_modules/@smithy/smithy-client
+286 silly ADD node_modules/@smithy/signature-v4
+287 silly ADD node_modules/@smithy/shared-ini-file-loader
+288 silly ADD node_modules/@smithy/service-error-classification
+289 silly ADD node_modules/@smithy/querystring-parser
+290 silly ADD node_modules/@smithy/querystring-builder
+291 silly ADD node_modules/@smithy/protocol-http
+292 silly ADD node_modules/@smithy/property-provider
+293 silly ADD node_modules/@smithy/node-http-handler
+294 silly ADD node_modules/@smithy/node-config-provider
+295 silly ADD node_modules/@smithy/middleware-stack
+296 silly ADD node_modules/@smithy/middleware-serde
+297 silly ADD node_modules/@smithy/middleware-retry
+298 silly ADD node_modules/@smithy/middleware-endpoint
+299 silly ADD node_modules/@smithy/middleware-content-length
+300 silly ADD node_modules/@smithy/is-array-buffer
+301 silly ADD node_modules/@smithy/invalid-dependency
+302 silly ADD node_modules/@smithy/hash-node
+303 silly ADD node_modules/@smithy/fetch-http-handler
+304 silly ADD node_modules/@smithy/eventstream-serde-universal
+305 silly ADD node_modules/@smithy/eventstream-serde-node
+306 silly ADD node_modules/@smithy/eventstream-serde-config-resolver
+307 silly ADD node_modules/@smithy/eventstream-serde-browser
+308 silly ADD node_modules/@smithy/eventstream-codec
+309 silly ADD node_modules/@smithy/credential-provider-imds
+310 silly ADD node_modules/@smithy/core
+311 silly ADD node_modules/@smithy/config-resolver
+312 silly ADD node_modules/@smithy/abort-controller
+313 silly ADD node_modules/@jridgewell/trace-mapping
+314 silly ADD node_modules/@jridgewell/sourcemap-codec
+315 silly ADD node_modules/@jridgewell/resolve-uri
+316 silly ADD node_modules/@jridgewell/gen-mapping
+317 silly ADD node_modules/@babel/types
+318 silly ADD node_modules/@babel/traverse
+319 silly ADD node_modules/@babel/traverse/node_modules/ms
+320 silly ADD node_modules/@babel/traverse/node_modules/debug
+321 silly ADD node_modules/@babel/template
+322 silly ADD node_modules/@babel/runtime
+323 silly ADD node_modules/@babel/parser
+324 silly ADD node_modules/@babel/helper-validator-identifier
+325 silly ADD node_modules/@babel/helper-string-parser
+326 silly ADD node_modules/@babel/helper-globals
+327 silly ADD node_modules/@babel/generator
+328 silly ADD node_modules/@babel/code-frame
+329 silly ADD node_modules/@aws/lambda-invoke-store
+330 silly ADD node_modules/@aws-sdk/xml-builder
+331 silly ADD node_modules/@aws-sdk/util-user-agent-node
+332 silly ADD node_modules/@aws-sdk/util-user-agent-browser
+333 silly ADD node_modules/@aws-sdk/util-locate-window
+334 silly ADD node_modules/@aws-sdk/util-format-url
+335 silly ADD node_modules/@aws-sdk/util-endpoints
+336 silly ADD node_modules/@aws-sdk/util-dynamodb
+337 silly ADD node_modules/@aws-sdk/types
+338 silly ADD node_modules/@aws-sdk/token-providers
+339 silly ADD node_modules/@aws-sdk/region-config-resolver
+340 silly ADD node_modules/@aws-sdk/nested-clients
+341 silly ADD node_modules/@aws-sdk/middleware-websocket
+342 silly ADD node_modules/@aws-sdk/middleware-user-agent
+343 silly ADD node_modules/@aws-sdk/middleware-sdk-ec2
+344 silly ADD node_modules/@aws-sdk/middleware-recursion-detection
+345 silly ADD node_modules/@aws-sdk/middleware-logger
+346 silly ADD node_modules/@aws-sdk/middleware-host-header
+347 silly ADD node_modules/@aws-sdk/middleware-eventstream
+348 silly ADD node_modules/@aws-sdk/middleware-endpoint-discovery
+349 silly ADD node_modules/@aws-sdk/lib-dynamodb
+350 silly ADD node_modules/@aws-sdk/eventstream-handler-node
+351 silly ADD node_modules/@aws-sdk/endpoint-cache
+352 silly ADD node_modules/@aws-sdk/dynamodb-codec
+353 silly ADD node_modules/@aws-sdk/credential-provider-web-identity
+354 silly ADD node_modules/@aws-sdk/credential-provider-sso
+355 silly ADD node_modules/@aws-sdk/credential-provider-process
+356 silly ADD node_modules/@aws-sdk/credential-provider-node
+357 silly ADD node_modules/@aws-sdk/credential-provider-login
+358 silly ADD node_modules/@aws-sdk/credential-provider-ini
+359 silly ADD node_modules/@aws-sdk/credential-provider-http
+360 silly ADD node_modules/@aws-sdk/credential-provider-env
+361 silly ADD node_modules/@aws-sdk/core
+362 silly ADD node_modules/@aws-sdk/client-sns
+363 silly ADD node_modules/@aws-sdk/client-lambda
+364 silly ADD node_modules/@aws-sdk/client-ec2
+365 silly ADD node_modules/@aws-sdk/client-dynamodb
+366 silly ADD node_modules/@aws-sdk/client-bedrock-runtime
+367 silly ADD node_modules/@aws-crypto/util
+368 silly ADD node_modules/@aws-crypto/util/node_modules/@smithy/util-utf8
+369 silly ADD node_modules/@aws-crypto/util/node_modules/@smithy/util-buffer-from
+370 silly ADD node_modules/@aws-crypto/util/node_modules/@smithy/is-array-buffer
+371 silly ADD node_modules/@aws-crypto/supports-web-crypto
+372 silly ADD node_modules/@aws-crypto/sha256-js
+373 silly ADD node_modules/@aws-crypto/sha256-browser
+374 silly ADD node_modules/@aws-crypto/sha256-browser/node_modules/@smithy/util-utf8
+375 silly ADD node_modules/@aws-crypto/sha256-browser/node_modules/@smithy/util-buffer-from
+376 silly ADD node_modules/@aws-crypto/sha256-browser/node_modules/@smithy/is-array-buffer
+377 silly ADD node_modules/@aws-crypto/crc32
+378 verbose cwd /home/ec2-user/powerpulse
+379 verbose os Linux 6.1.163-186.299.amzn2023.x86_64
+380 verbose node v20.20.1
+381 verbose npm  v10.8.2
+382 verbose exit 0
+383 info ok

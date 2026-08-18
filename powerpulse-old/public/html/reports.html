@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PowerPulse — Report</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css" />
+  <link rel="stylesheet" href="/public/css/reports.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/public/css/chatbot.css" />
+  <!-- Add marked library for markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .ai-summary-container {
+      background: rgba(99, 102, 241, 0.05);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      color: #e2e8f0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .ai-summary-container h3 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      color: #818cf8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .ai-summary-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .ai-summary-content th, .ai-summary-content td {
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 10px 15px;
+      text-align: left;
+    }
+    .ai-summary-content th {
+      background-color: rgba(99, 102, 241, 0.2);
+      color: #a5b4fc;
+      font-weight: 600;
+    }
+    .ai-summary-content ul, .ai-summary-content ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    .ai-summary-content li {
+      margin-bottom: 5px;
+    }
+    .ai-summary-content p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .ai-loading-placeholder {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+  </style>
+  <script src="/public/js/config.js"></script>
+  <script src="/public/js/chatbot.js" defer></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-overlay"></div>
+      <div class="sidebar-header">
+        <h2><i class="fas fa-bolt"></i> PowerPulse</h2>
+        <button id="toggleSidebar" title="Toggle Sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="/dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+        <li><a href="/stored-data"><i class="fas fa-table"></i><span>Data Table</span></a></li>
+        <li class="active"><a href="/reports"><i class="fas fa-chart-bar"></i><span>Reports</span></a></li>
+        <li><a href="#"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        <li><a href="/register-config"><i class="fas fa-microchip"></i><span>Register Config</span></a></li>
+        <li><a href="/dashboard#historySection"><i class="fas fa-chart-line"></i><span>History</span></a></li>
+
+        <li class="admin-nav-item" style="display:none;"><a href="/dashboard#lambdaSection"><i class="fas fa-code"></i><span>Lambda</span></a></li>
+        <li class="admin-nav-item" style="display:none;"><a href="/dashboard#snsSection"><i class="fas fa-bell"></i><span>SNS Alerts</span></a></li>
+      </ul>
+
+      <footer class="sidebar-footer">
+        <small>v2.0 — © PowerPulse</small>
+      </footer>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="header">
+        <div class="header-left">
+          <h1>📊 PowerPulse - Report</h1>
+          <p class="subtitle">Source Switching, Consumption & Diagnostics</p>
+        </div>
+        <div class="header-actions">
+          <div id="userProfile"
+            style="display: flex; align-items: center; gap: 8px; background: rgba(99,102,241,0.15); padding: 6px 14px; border-radius: 10px; border: 1px solid rgba(99,102,241,0.25);">
+            <i class="fas fa-user-circle" style="font-size: 1.2rem; color: #818cf8;"></i>
+            <span id="userName" style="font-weight: 600; font-size: 0.85rem;">...</span>
+          </div>
+          <button id="themeToggle">🌙 Dark Mode</button>
+          <a href="/api/auth/logout" id="logoutBtn"
+            style="padding: 8px 16px; background: #ef4444; color: white; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">🚪
+            Logout</a>
+        </div>
+      </header>
+
+      <!-- Controls -->
+      <section class="section">
+        <div class="report-controls">
+          <div class="report-control-group">
+            <label for="reportRange">📅 Time Range</label>
+            <select id="reportRange" class="report-dropdown">
+              <option value="daily" selected>Last 24 Hours</option>
+              <option value="weekly">Last 7 Days</option>
+              <option value="monthly">Last 30 Days</option>
+              <option value="custom">Custom Range</option>
+            </select>
+          </div>
+
+          <div id="reportCustomDates" class="report-custom-dates" style="display:none;">
+            <div class="report-control-group">
+              <label for="reportStartDate">From</label>
+              <input type="date" id="reportStartDate">
+            </div>
+            <div class="report-control-group">
+              <label for="reportEndDate">To</label>
+              <input type="date" id="reportEndDate">
+            </div>
+          </div>
+
+          <button id="generateReportBtn" class="generate-btn">
+            <i class="fas fa-file-alt"></i> Generate Report
+          </button>
+
+          <button id="downloadPdfBtn" class="download-btn" style="display:none;">
+            <i class="fas fa-download"></i> Download PDF
+          </button>
+        </div>
+      </section>
+
+      <!-- Report Output -->
+      <div id="reportOutput">
+        <div class="report-empty">
+          <i class="fas fa-file-alt" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.3;"></i>
+          <p>Select a time range and click <strong>Generate Report</strong> to view the health check.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="/public/js/reports.js"></script>
+</body>
+
+</html>

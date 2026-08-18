@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerPulse — About</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="/public/js/config.js"></script>
+  <style>
+    .about-content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .about-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .about-header .logo-icon {
+      font-size: 3.5rem;
+      color: #6366f1;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.4));
+    }
+
+    .about-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      padding: 25px;
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: 16px;
+      border: 1px solid rgba(99, 102, 241, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    .feature-item i {
+      font-size: 2rem;
+      color: #818cf8;
+      margin-bottom: 15px;
+    }
+
+    .feature-item h3 {
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .tech-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #a5b4fc;
+      margin: 5px;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 50px;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-bolt"></i> PowerPulse</h2>
+      </div>
+      <ul class="nav-list">
+        <li><a href="/dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+        <li><a href="/stored-data"><i class="fas fa-table"></i><span>Data Table</span></a></li>
+        <li><a href="/reports"><i class="fas fa-chart-bar"></i><span>Reports</span></a></li>
+        <li><a href="/settings"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        <li><a href="/register-config"><i class="fas fa-microchip"></i><span>Register Config</span></a></li>
+        <li class="active"><a href="/about"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+      </ul>
+      <footer class="sidebar-footer">
+        <small>v2.1 — © PowerPulse</small>
+      </footer>
+    </nav>
+
+    <main class="main-content">
+      <div class="about-content">
+        <header class="about-header">
+          <i class="fas fa-bolt logo-icon"></i>
+          <h1>About PowerPulse</h1>
+          <p class="subtitle" style="color:#94a3b8; font-size:1.1rem;">The Ultimate Smart Energy Monitoring Solution</p>
+        </header>
+
+        <section class="about-card">
+          <h2 style="color:#f8fafc; margin-bottom: 20px;">What is PowerPulse?</h2>
+          <p style="color:#cbd5e1; line-height: 1.8; font-size: 1.05rem;">
+            PowerPulse is a comprehensive, industrial-grade energy dashboard designed to provide real-time visibility into your power infrastructure. 
+            Whether you are managing traditional utility grid power or auxiliary generator systems, PowerPulse consolidates complex three-phase data 
+            into intuitive, actionable insights. By leveraging modern IoT protocols and advanced AI algorithms, we help you detect anomalies, 
+            reduce operational downtime, and optimize energy costs.
+          </p>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <i class="fas fa-satellite-dish"></i>
+              <h3>Real-Time IoT</h3>
+              <p>Instantaneous streaming of three-phase voltage, current, and power metrics via AWS IoT Core and MQTT protocols.</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-brain"></i>
+              <h3>AI-Driven Analytics</h3>
+              <p>Harness the power of AWS Bedrock and OpenAI to generate automated executive summaries and diagnostic reports.</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-bell"></i>
+              <h3>Dynamic Alerting</h3>
+              <p>Configurable multi-parameter threshold monitoring with instant notifications via AWS SNS and cooldown protection.</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-history"></i>
+              <h3>Downtime Tracking</h3>
+              <p>Automatic logging of source switching events and downtime incidents to calculate precise system uptime percentages.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-card">
+          <h2 style="color:#f8fafc; margin-bottom: 20px;">Technology Stack</h2>
+          <p style="color:#94a3b8; margin-bottom: 20px;">PowerPulse is built upon a resilient, cloud-native architecture for maximum reliability.</p>
+          <div style="display: flex; flex-wrap: wrap;">
+            <span class="tech-pill">Node.js / Express</span>
+            <span class="tech-pill">AWS IoT Core</span>
+            <span class="tech-pill">DynamoDB</span>
+            <span class="tech-pill">AWS SNS</span>
+            <span class="tech-pill">AWS Bedrock</span>
+            <span class="tech-pill">OpenAI GPT-4o</span>
+            <span class="tech-pill">Chart.js</span>
+            <span class="tech-pill">WebSockets (Socket.io)</span>
+          </div>
+        </section>
+
+        <footer class="footer-note">
+          <p>Designed for engineers, built for reliability.</p>
+          <p style="margin-top:10px;">&copy; 2026 PowerPulse Inc. All rights reserved.</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Theme initialization
+    const savedTheme = localStorage.getItem('powerpulse-theme') || 'dark';
+    document.body.className = savedTheme + '-theme';
+  </script>
+</body>
+
+</html>

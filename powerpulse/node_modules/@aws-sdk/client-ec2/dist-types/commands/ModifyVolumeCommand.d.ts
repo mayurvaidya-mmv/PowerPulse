@@ -1,0 +1,112 @@
+import { Command as $Command } from "@smithy/smithy-client";
+import type { MetadataBearer as __MetadataBearer } from "@smithy/types";
+import type { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
+import type { ModifyVolumeRequest, ModifyVolumeResult } from "../models/models_7";
+/**
+ * @public
+ */
+export type { __MetadataBearer };
+export { $Command };
+/**
+ * @public
+ *
+ * The input for {@link ModifyVolumeCommand}.
+ */
+export interface ModifyVolumeCommandInput extends ModifyVolumeRequest {
+}
+/**
+ * @public
+ *
+ * The output of {@link ModifyVolumeCommand}.
+ */
+export interface ModifyVolumeCommandOutput extends ModifyVolumeResult, __MetadataBearer {
+}
+declare const ModifyVolumeCommand_base: {
+    new (input: ModifyVolumeCommandInput): import("@smithy/smithy-client").CommandImpl<ModifyVolumeCommandInput, ModifyVolumeCommandOutput, EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes>;
+    new (input: ModifyVolumeCommandInput): import("@smithy/smithy-client").CommandImpl<ModifyVolumeCommandInput, ModifyVolumeCommandOutput, EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes>;
+    getEndpointParameterInstructions(): import("@smithy/middleware-endpoint").EndpointParameterInstructions;
+};
+/**
+ * <p>You can modify several parameters of an existing EBS volume, including volume size, volume
+ *       type, and IOPS capacity. If your EBS volume is attached to a current-generation EC2 instance
+ *       type, you might be able to apply these changes without stopping the instance or detaching the
+ *       volume from it. For more information about modifying EBS volumes, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modify-volume.html">Amazon EBS Elastic Volumes</a>
+ *       in the <i>Amazon EBS User Guide</i>.</p>
+ *          <p>When you complete a resize operation on your volume, you need to extend the volume's
+ *       file-system size to take advantage of the new storage capacity. For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/recognize-expanded-volume-linux.html">Extend the file system</a>.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress of volume modifications</a> in the <i>Amazon EBS User Guide</i>.</p>
+ *          <p>With previous-generation instance types, resizing an EBS volume might require detaching and
+ *       reattaching the volume or stopping and restarting the instance.</p>
+ *          <p>After you initiate a volume modification, you must wait for that modification to reach the
+ *       <code>completed</code> state before you can initiate another modification for the same volume.
+ *       You can modify a volume up to four times within a rolling 24-hour period, as long as the volume
+ *       is in the <code>in-use</code> or <code>available</code> state, and all previous modifications
+ *       for that volume are <code>completed</code>. If you exceed this limit, you get an error message
+ *       that indicates when you can perform your next modification.</p>
+ * @example
+ * Use a bare-bones client and the command you need to make an API call.
+ * ```javascript
+ * import { EC2Client, ModifyVolumeCommand } from "@aws-sdk/client-ec2"; // ES Modules import
+ * // const { EC2Client, ModifyVolumeCommand } = require("@aws-sdk/client-ec2"); // CommonJS import
+ * // import type { EC2ClientConfig } from "@aws-sdk/client-ec2";
+ * const config = {}; // type is EC2ClientConfig
+ * const client = new EC2Client(config);
+ * const input = { // ModifyVolumeRequest
+ *   DryRun: true || false,
+ *   VolumeId: "STRING_VALUE", // required
+ *   Size: Number("int"),
+ *   VolumeType: "standard" || "io1" || "io2" || "gp2" || "sc1" || "st1" || "gp3",
+ *   Iops: Number("int"),
+ *   Throughput: Number("int"),
+ *   MultiAttachEnabled: true || false,
+ * };
+ * const command = new ModifyVolumeCommand(input);
+ * const response = await client.send(command);
+ * // { // ModifyVolumeResult
+ * //   VolumeModification: { // VolumeModification
+ * //     VolumeId: "STRING_VALUE",
+ * //     ModificationState: "modifying" || "optimizing" || "completed" || "failed",
+ * //     StatusMessage: "STRING_VALUE",
+ * //     TargetSize: Number("int"),
+ * //     TargetIops: Number("int"),
+ * //     TargetVolumeType: "standard" || "io1" || "io2" || "gp2" || "sc1" || "st1" || "gp3",
+ * //     TargetThroughput: Number("int"),
+ * //     TargetMultiAttachEnabled: true || false,
+ * //     OriginalSize: Number("int"),
+ * //     OriginalIops: Number("int"),
+ * //     OriginalVolumeType: "standard" || "io1" || "io2" || "gp2" || "sc1" || "st1" || "gp3",
+ * //     OriginalThroughput: Number("int"),
+ * //     OriginalMultiAttachEnabled: true || false,
+ * //     Progress: Number("long"),
+ * //     StartTime: new Date("TIMESTAMP"),
+ * //     EndTime: new Date("TIMESTAMP"),
+ * //   },
+ * // };
+ *
+ * ```
+ *
+ * @param ModifyVolumeCommandInput - {@link ModifyVolumeCommandInput}
+ * @returns {@link ModifyVolumeCommandOutput}
+ * @see {@link ModifyVolumeCommandInput} for command's `input` shape.
+ * @see {@link ModifyVolumeCommandOutput} for command's `response` shape.
+ * @see {@link EC2ClientResolvedConfig | config} for EC2Client's `config` shape.
+ *
+ * @throws {@link EC2ServiceException}
+ * <p>Base exception class for all service exceptions from EC2 service.</p>
+ *
+ *
+ * @public
+ */
+export declare class ModifyVolumeCommand extends ModifyVolumeCommand_base {
+    /** @internal type navigation helper, not in runtime. */
+    protected static __types: {
+        api: {
+            input: ModifyVolumeRequest;
+            output: ModifyVolumeResult;
+        };
+        sdk: {
+            input: ModifyVolumeCommandInput;
+            output: ModifyVolumeCommandOutput;
+        };
+    };
+}

@@ -1,0 +1,454 @@
+/* ======================================== */
+/*   ⚙️  SETTINGS PAGE                      */
+/* ======================================== */
+
+.settings-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.settings-tab {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.settings-tab:hover {
+  color: #e2e8f0;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.settings-tab.active {
+  color: #818cf8;
+  border-bottom-color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.settings-panel {
+  display: none;
+  animation: settingsFadeIn 0.3s ease;
+}
+
+.settings-panel.active {
+  display: block;
+}
+
+@keyframes settingsFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Settings Cards */
+.settings-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s;
+}
+
+.settings-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.settings-card h3 {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-card .card-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Setting Rows */
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  gap: 16px;
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.setting-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.setting-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 2px;
+}
+
+.setting-hint {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.setting-control {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input Styles */
+.settings-input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  min-width: 120px;
+}
+
+.settings-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.settings-input.wide {
+  min-width: 320px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.settings-select {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  min-width: 160px;
+}
+
+.settings-select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: #334155;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: #6366f1;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(22px);
+}
+
+/* Range Slider */
+.settings-range {
+  width: 140px;
+  accent-color: #6366f1;
+}
+
+.range-value {
+  font-size: 0.8rem;
+  color: #818cf8;
+  font-weight: 700;
+  min-width: 36px;
+  text-align: center;
+}
+
+/* API Key */
+.api-key-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.api-key-group .settings-input {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+/* Save Button */
+.settings-save-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+}
+
+.settings-save-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  padding: 10px 28px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.2s ease;
+}
+
+.settings-save-btn:hover {
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45);
+  transform: translateY(-1px);
+}
+
+.settings-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.settings-reset-btn {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-reset-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.about-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+}
+
+.about-item .about-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 4px;
+}
+
+.about-item .about-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* About Section Detailed Styles */
+.about-card section {
+  margin-bottom: 25px;
+}
+
+.about-card h2 {
+  font-size: 1.2rem;
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.about-text {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.feature-item i {
+  font-size: 1.4rem;
+  color: #818cf8;
+  margin-bottom: 10px;
+}
+
+.feature-item h4 {
+  margin-bottom: 6px;
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.feature-item p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tech-pill {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #a5b4fc;
+}
+
+/* ─── Light Mode ─── */
+body[data-theme="light"] .settings-tab {
+  color: #64748b;
+}
+
+body[data-theme="light"] .settings-tab.active {
+  color: #6366f1;
+}
+
+body[data-theme="light"] .settings-card {
+  background: #fff;
+  border-color: #e2e8f0;
+}
+
+body[data-theme="light"] .settings-card h3 {
+  color: #1e293b;
+}
+
+body[data-theme="light"] .setting-label {
+  color: #1e293b;
+}
+
+body[data-theme="light"] .settings-input,
+body[data-theme="light"] .settings-select {
+  background: #f8fafc;
+  color: #1e293b;
+  border-color: #e2e8f0;
+}
+
+body[data-theme="light"] .toggle-slider {
+  background: #cbd5e1;
+}
+
+body[data-theme="light"] .about-item {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+body[data-theme="light"] .about-item .about-value {
+  color: #0284c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings-tabs {
+    gap: 2px;
+  }
+  .settings-tab {
+    padding: 10px 14px;
+    font-size: 0.78rem;
+  }
+  .setting-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .api-key-group {
+    flex-direction: column;
+  }
+  .api-key-group .settings-input {
+    min-width: unset;
+  }
+}

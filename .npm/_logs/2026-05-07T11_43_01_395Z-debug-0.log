@@ -1,0 +1,991 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.1
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 warn config production Use `--omit=dev` instead.
+5 silly config load:file:/home/ec2-user/powerpulse/.npmrc
+6 silly config load:file:/home/ec2-user/.npmrc
+7 silly config load:file:/usr/etc/npmrc
+8 verbose title npm install
+9 verbose argv "install" "--production"
+10 verbose logfile logs-max:10 dir:/home/ec2-user/.npm/_logs/2026-05-07T11_43_01_395Z-
+11 verbose logfile /home/ec2-user/.npm/_logs/2026-05-07T11_43_01_395Z-debug-0.log
+12 silly packumentCache heap:495452160 maxSize:123863040 maxEntrySize:61931520
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly reify moves {}
+16 http fetch GET 200 https://registry.npmjs.org/npm 511ms
+17 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@babel/code-frame' ]
+18 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@babel/generator' ]
+19 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@babel/helper-globals' ]
+20 silly reify mark deleted [
+20 silly reify   '/home/ec2-user/powerpulse/node_modules/@babel/helper-string-parser'
+20 silly reify ]
+21 silly reify mark deleted [
+21 silly reify   '/home/ec2-user/powerpulse/node_modules/@babel/helper-validator-identifier'
+21 silly reify ]
+22 silly reify mark deleted [
+22 silly reify   '/home/ec2-user/powerpulse/node_modules/@babel/parser',
+22 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/parser'
+22 silly reify ]
+23 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@babel/template' ]
+24 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@babel/traverse' ]
+25 silly reify mark deleted [
+25 silly reify   '/home/ec2-user/powerpulse/node_modules/@babel/traverse/node_modules/debug'
+25 silly reify ]
+26 silly reify mark deleted [
+26 silly reify   '/home/ec2-user/powerpulse/node_modules/@babel/traverse/node_modules/ms'
+26 silly reify ]
+27 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@babel/types' ]
+28 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@jridgewell/gen-mapping' ]
+29 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@jridgewell/resolve-uri' ]
+30 silly reify mark deleted [
+30 silly reify   '/home/ec2-user/powerpulse/node_modules/@jridgewell/sourcemap-codec'
+30 silly reify ]
+31 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@jridgewell/trace-mapping' ]
+32 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@types/minimatch' ]
+33 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@types/parse-json' ]
+34 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@vue/compiler-core' ]
+35 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@vue/compiler-dom' ]
+36 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@vue/compiler-sfc' ]
+37 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@vue/compiler-ssr' ]
+38 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/@vue/shared' ]
+39 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/ansi-regex' ]
+40 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/ansi-styles' ]
+41 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/argparse' ]
+42 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/array-differ' ]
+43 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/array-union' ]
+44 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/arrify' ]
+45 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/balanced-match' ]
+46 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/brace-expansion' ]
+47 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/braces' ]
+48 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/callsite' ]
+49 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/callsites' ]
+50 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/camelcase' ]
+51 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/cliui' ]
+52 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/color-convert' ]
+53 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/color-name' ]
+54 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/concat-map' ]
+55 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/cosmiconfig' ]
+56 silly reify mark deleted [
+56 silly reify   '/home/ec2-user/powerpulse/node_modules/depcheck',
+56 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/depcheck'
+56 silly reify ]
+57 silly reify mark deleted [
+57 silly reify   '/home/ec2-user/powerpulse/node_modules/depcheck/node_modules/debug'
+57 silly reify ]
+58 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/depcheck/node_modules/ms' ]
+59 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/deps-regex' ]
+60 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/detect-file' ]
+61 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/emoji-regex' ]
+62 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/entities' ]
+63 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/error-ex' ]
+64 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/escalade' ]
+65 silly reify mark deleted [
+65 silly reify   '/home/ec2-user/powerpulse/node_modules/esprima',
+65 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/esparse',
+65 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/esvalidate'
+65 silly reify ]
+66 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/estree-walker' ]
+67 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/expand-tilde' ]
+68 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/fill-range' ]
+69 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/findup-sync' ]
+70 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/get-caller-file' ]
+71 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/global-modules' ]
+72 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/global-prefix' ]
+73 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/homedir-polyfill' ]
+74 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/ignore' ]
+75 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/import-fresh' ]
+76 silly reify mark deleted [
+76 silly reify   '/home/ec2-user/powerpulse/node_modules/import-fresh/node_modules/resolve-from'
+76 silly reify ]
+77 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/ini' ]
+78 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-arrayish' ]
+79 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-core-module' ]
+80 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-extglob' ]
+81 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-fullwidth-code-point' ]
+82 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-glob' ]
+83 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-number' ]
+84 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/is-windows' ]
+85 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/isexe' ]
+86 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/js-tokens' ]
+87 silly reify mark deleted [
+87 silly reify   '/home/ec2-user/powerpulse/node_modules/js-yaml',
+87 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/js-yaml'
+87 silly reify ]
+88 silly reify mark deleted [
+88 silly reify   '/home/ec2-user/powerpulse/node_modules/jsesc',
+88 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/jsesc'
+88 silly reify ]
+89 silly reify mark deleted [
+89 silly reify   '/home/ec2-user/powerpulse/node_modules/json-parse-even-better-errors'
+89 silly reify ]
+90 silly reify mark deleted [
+90 silly reify   '/home/ec2-user/powerpulse/node_modules/json5',
+90 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/json5'
+90 silly reify ]
+91 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/lines-and-columns' ]
+92 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/lodash' ]
+93 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/magic-string' ]
+94 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/micromatch' ]
+95 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/minimatch' ]
+96 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/multimatch' ]
+97 silly reify mark deleted [
+97 silly reify   '/home/ec2-user/powerpulse/node_modules/multimatch/node_modules/brace-expansion'
+97 silly reify ]
+98 silly reify mark deleted [
+98 silly reify   '/home/ec2-user/powerpulse/node_modules/multimatch/node_modules/minimatch'
+98 silly reify ]
+99 silly reify mark deleted [
+99 silly reify   '/home/ec2-user/powerpulse/node_modules/nanoid',
+99 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/nanoid'
+99 silly reify ]
+100 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/parent-module' ]
+101 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/parse-json' ]
+102 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/parse-passwd' ]
+103 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/path-parse' ]
+104 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/path-type' ]
+105 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/picocolors' ]
+106 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/picomatch' ]
+107 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/please-upgrade-node' ]
+108 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/postcss' ]
+109 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/readdirp' ]
+110 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/require-directory' ]
+111 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/require-package-name' ]
+112 silly reify mark deleted [
+112 silly reify   '/home/ec2-user/powerpulse/node_modules/resolve',
+112 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/resolve'
+112 silly reify ]
+113 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/resolve-dir' ]
+114 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/resolve-from' ]
+115 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/semver-compare' ]
+116 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/source-map-js' ]
+117 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/sprintf-js' ]
+118 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/string-width' ]
+119 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/strip-ansi' ]
+120 silly reify mark deleted [
+120 silly reify   '/home/ec2-user/powerpulse/node_modules/supports-preserve-symlinks-flag'
+120 silly reify ]
+121 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/to-regex-range' ]
+122 silly reify mark deleted [
+122 silly reify   '/home/ec2-user/powerpulse/node_modules/which',
+122 silly reify   '/home/ec2-user/powerpulse/node_modules/.bin/which'
+122 silly reify ]
+123 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/wrap-ansi' ]
+124 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/y18n' ]
+125 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/yaml' ]
+126 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/yargs' ]
+127 silly reify mark deleted [ '/home/ec2-user/powerpulse/node_modules/yargs-parser' ]
+128 silly audit bulk request {
+128 silly audit   '@aws-crypto/crc32': [ '5.2.0' ],
+128 silly audit   '@aws-crypto/sha256-browser': [ '5.2.0' ],
+128 silly audit   '@smithy/is-array-buffer': [ '2.2.0', '4.2.2' ],
+128 silly audit   '@smithy/util-buffer-from': [ '2.2.0', '4.2.2' ],
+128 silly audit   '@smithy/util-utf8': [ '2.3.0', '4.2.2' ],
+128 silly audit   '@aws-crypto/sha256-js': [ '5.2.0' ],
+128 silly audit   '@aws-crypto/supports-web-crypto': [ '5.2.0' ],
+128 silly audit   '@aws-crypto/util': [ '5.2.0' ],
+128 silly audit   '@aws-sdk/client-bedrock-runtime': [ '3.1014.0' ],
+128 silly audit   '@aws-sdk/client-dynamodb': [ '3.1014.0' ],
+128 silly audit   '@aws-sdk/client-ec2': [ '3.1009.0' ],
+128 silly audit   '@aws-sdk/client-lambda': [ '3.1009.0' ],
+128 silly audit   '@aws-sdk/client-sns': [ '3.1009.0' ],
+128 silly audit   '@aws-sdk/core': [ '3.973.23' ],
+128 silly audit   '@aws-sdk/credential-provider-env': [ '3.972.21' ],
+128 silly audit   '@aws-sdk/credential-provider-http': [ '3.972.23' ],
+128 silly audit   '@aws-sdk/credential-provider-ini': [ '3.972.23' ],
+128 silly audit   '@aws-sdk/credential-provider-login': [ '3.972.23' ],
+128 silly audit   '@aws-sdk/credential-provider-node': [ '3.972.24' ],
+128 silly audit   '@aws-sdk/credential-provider-process': [ '3.972.21' ],
+128 silly audit   '@aws-sdk/credential-provider-sso': [ '3.972.23' ],
+128 silly audit   '@aws-sdk/credential-provider-web-identity': [ '3.972.23' ],
+128 silly audit   '@aws-sdk/dynamodb-codec': [ '3.972.24' ],
+128 silly audit   '@aws-sdk/endpoint-cache': [ '3.972.4' ],
+128 silly audit   '@aws-sdk/eventstream-handler-node': [ '3.972.11' ],
+128 silly audit   '@aws-sdk/lib-dynamodb': [ '3.1008.0' ],
+128 silly audit   '@aws-sdk/middleware-endpoint-discovery': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/middleware-eventstream': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/middleware-host-header': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/middleware-logger': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/middleware-recursion-detection': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/middleware-sdk-ec2': [ '3.972.15' ],
+128 silly audit   '@aws-sdk/middleware-user-agent': [ '3.972.24' ],
+128 silly audit   '@aws-sdk/middleware-websocket': [ '3.972.13' ],
+128 silly audit   '@aws-sdk/nested-clients': [ '3.996.13' ],
+128 silly audit   '@aws-sdk/region-config-resolver': [ '3.972.9' ],
+128 silly audit   '@aws-sdk/token-providers': [ '3.1014.0' ],
+128 silly audit   '@aws-sdk/types': [ '3.973.6' ],
+128 silly audit   '@aws-sdk/util-dynamodb': [ '3.996.2' ],
+128 silly audit   '@aws-sdk/util-endpoints': [ '3.996.5' ],
+128 silly audit   '@aws-sdk/util-format-url': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/util-locate-window': [ '3.965.5' ],
+128 silly audit   '@aws-sdk/util-user-agent-browser': [ '3.972.8' ],
+128 silly audit   '@aws-sdk/util-user-agent-node': [ '3.973.10' ],
+128 silly audit   '@aws-sdk/xml-builder': [ '3.972.15' ],
+128 silly audit   '@aws/lambda-invoke-store': [ '0.2.4' ],
+128 silly audit   '@babel/runtime': [ '7.28.6' ],
+128 silly audit   debug: [ '2.6.9', '4.4.3' ],
+128 silly audit   ms: [ '2.1.3', '2.0.0' ],
+128 silly audit   '@smithy/abort-controller': [ '4.2.12' ],
+128 silly audit   '@smithy/config-resolver': [ '4.4.13' ],
+128 silly audit   '@smithy/core': [ '3.23.12' ],
+128 silly audit   '@smithy/credential-provider-imds': [ '4.2.12' ],
+128 silly audit   '@smithy/eventstream-codec': [ '4.2.12' ],
+128 silly audit   '@smithy/eventstream-serde-browser': [ '4.2.12' ],
+128 silly audit   '@smithy/eventstream-serde-config-resolver': [ '4.3.12' ],
+128 silly audit   '@smithy/eventstream-serde-node': [ '4.2.12' ],
+128 silly audit   '@smithy/eventstream-serde-universal': [ '4.2.12' ],
+128 silly audit   '@smithy/fetch-http-handler': [ '5.3.15' ],
+128 silly audit   '@smithy/hash-node': [ '4.2.12' ],
+128 silly audit   '@smithy/invalid-dependency': [ '4.2.12' ],
+128 silly audit   '@smithy/middleware-content-length': [ '4.2.12' ],
+128 silly audit   '@smithy/middleware-endpoint': [ '4.4.27' ],
+128 silly audit   '@smithy/middleware-retry': [ '4.4.44' ],
+128 silly audit   '@smithy/middleware-serde': [ '4.2.15' ],
+128 silly audit   '@smithy/middleware-stack': [ '4.2.12' ],
+128 silly audit   '@smithy/node-config-provider': [ '4.3.12' ],
+128 silly audit   '@smithy/node-http-handler': [ '4.5.0' ],
+128 silly audit   '@smithy/property-provider': [ '4.2.12' ],
+128 silly audit   '@smithy/protocol-http': [ '5.3.12' ],
+128 silly audit   '@smithy/querystring-builder': [ '4.2.12' ],
+128 silly audit   '@smithy/querystring-parser': [ '4.2.12' ],
+128 silly audit   '@smithy/service-error-classification': [ '4.2.12' ],
+128 silly audit   '@smithy/shared-ini-file-loader': [ '4.4.7' ],
+128 silly audit   '@smithy/signature-v4': [ '5.3.12' ],
+128 silly audit   '@smithy/smithy-client': [ '4.12.7' ],
+128 silly audit   '@smithy/types': [ '4.13.1' ],
+128 silly audit   '@smithy/url-parser': [ '4.2.12' ],
+128 silly audit   '@smithy/util-base64': [ '4.3.2' ],
+128 silly audit   '@smithy/util-body-length-browser': [ '4.2.2' ],
+128 silly audit   '@smithy/util-body-length-node': [ '4.2.3' ],
+128 silly audit   '@smithy/util-config-provider': [ '4.2.2' ],
+128 silly audit   '@smithy/util-defaults-mode-browser': [ '4.3.43' ],
+128 silly audit   '@smithy/util-defaults-mode-node': [ '4.2.47' ],
+128 silly audit   '@smithy/util-endpoints': [ '3.3.3' ],
+128 silly audit   '@smithy/util-hex-encoding': [ '4.2.2' ],
+128 silly audit   '@smithy/util-middleware': [ '4.2.12' ],
+128 silly audit   '@smithy/util-retry': [ '4.2.12' ],
+128 silly audit   '@smithy/util-stream': [ '4.5.20' ],
+128 silly audit   '@smithy/util-uri-escape': [ '4.2.2' ],
+128 silly audit   '@smithy/util-waiter': [ '4.2.13' ],
+128 silly audit   '@smithy/uuid': [ '1.1.2' ],
+128 silly audit   '@types/node': [ '25.4.0' ],
+128 silly audit   '@types/readable-stream': [ '4.0.23' ],
+128 silly audit   '@types/ws': [ '8.18.1' ],
+128 silly audit   'abort-controller': [ '3.0.0' ],
+128 silly audit   accepts: [ '1.3.8' ],
+128 silly audit   'array-flatten': [ '1.1.1' ],
+128 silly audit   asynckit: [ '0.4.0' ],
+128 silly audit   axios: [ '1.13.6' ],
+128 silly audit   'base64-js': [ '1.5.1' ],
+128 silly audit   bcryptjs: [ '2.4.3' ],
+128 silly audit   bl: [ '6.1.6' ],
+128 silly audit   'body-parser': [ '1.20.4' ],
+128 silly audit   'http-errors': [ '2.0.1', '2.0.0' ],
+128 silly audit   statuses: [ '2.0.2', '2.0.1' ],
+128 silly audit   bowser: [ '2.14.1' ],
+128 silly audit   'broker-factory': [ '3.1.13' ],
+128 silly audit   buffer: [ '6.0.3' ],
+128 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+128 silly audit   'buffer-from': [ '1.1.2' ],
+128 silly audit   bytes: [ '3.1.2' ],
+128 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+128 silly audit   'call-bound': [ '1.0.4' ],
+128 silly audit   'combined-stream': [ '1.0.8' ],
+128 silly audit   commist: [ '3.2.0' ],
+128 silly audit   'concat-stream': [ '2.0.0' ],
+128 silly audit   'readable-stream': [ '3.6.2', '4.7.0' ],
+128 silly audit   'content-disposition': [ '0.5.4' ],
+128 silly audit   'content-type': [ '1.0.5' ],
+128 silly audit   cookie: [ '0.7.2' ],
+128 silly audit   'cookie-parser': [ '1.4.7' ],
+128 silly audit   'cookie-signature': [ '1.0.6' ],
+128 silly audit   'delayed-stream': [ '1.0.0' ],
+128 silly audit   depd: [ '2.0.0' ],
+128 silly audit   destroy: [ '1.2.0' ],
+128 silly audit   dotenv: [ '16.4.7' ],
+128 silly audit   'dunder-proto': [ '1.0.1' ],
+128 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+128 silly audit   'ee-first': [ '1.1.1' ],
+128 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+128 silly audit   'es-define-property': [ '1.0.1' ],
+128 silly audit   'es-errors': [ '1.3.0' ],
+128 silly audit   'es-object-atoms': [ '1.1.1' ],
+128 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+128 silly audit   'escape-html': [ '1.0.3' ],
+128 silly audit   etag: [ '1.8.1' ],
+128 silly audit   'event-target-shim': [ '5.0.1' ],
+128 silly audit   events: [ '3.3.0' ],
+128 silly audit   express: [ '4.22.1' ],
+128 silly audit   'fast-unique-numbers': [ '9.0.26' ],
+128 silly audit   'fast-xml-builder': [ '1.1.4' ],
+128 silly audit   'fast-xml-parser': [ '5.5.8' ],
+128 silly audit   finalhandler: [ '1.3.1' ],
+128 silly audit   'follow-redirects': [ '1.15.11' ],
+128 silly audit   'form-data': [ '4.0.5' ],
+128 silly audit   forwarded: [ '0.2.0' ],
+128 silly audit   fresh: [ '0.5.2' ],
+128 silly audit   'function-bind': [ '1.1.2' ],
+128 silly audit   'get-intrinsic': [ '1.3.0' ],
+128 silly audit   'get-proto': [ '1.0.1' ],
+128 silly audit   gopd: [ '1.2.0' ],
+128 silly audit   'has-symbols': [ '1.1.0' ],
+128 silly audit   'has-tostringtag': [ '1.0.2' ],
+128 silly audit   hasown: [ '2.0.2' ],
+128 silly audit   'help-me': [ '5.0.0' ],
+128 silly audit   'iconv-lite': [ '0.4.24' ],
+128 silly audit   ieee754: [ '1.2.1' ],
+128 silly audit   inherits: [ '2.0.4' ],
+128 silly audit   'ip-address': [ '10.1.0' ],
+128 silly audit   'ipaddr.js': [ '1.9.1' ],
+128 silly audit   'js-sdsl': [ '4.3.0' ],
+128 silly audit   jsonwebtoken: [ '9.0.3' ],
+128 silly audit   jwa: [ '2.0.1' ],
+128 silly audit   jws: [ '4.0.1' ],
+128 silly audit   'lodash.includes': [ '4.3.0' ],
+128 silly audit   'lodash.isboolean': [ '3.0.3' ],
+128 silly audit   'lodash.isinteger': [ '4.0.4' ],
+128 silly audit   'lodash.isnumber': [ '3.0.3' ],
+128 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+128 silly audit   'lodash.isstring': [ '4.0.1' ],
+128 silly audit   'lodash.once': [ '4.1.1' ],
+128 silly audit   'lru-cache': [ '10.4.3' ],
+128 silly audit   'math-intrinsics': [ '1.1.0' ],
+128 silly audit   'media-typer': [ '0.3.0' ],
+128 silly audit   'merge-descriptors': [ '1.0.3' ],
+128 silly audit   methods: [ '1.1.2' ],
+128 silly audit   mime: [ '1.6.0' ],
+128 silly audit   'mime-db': [ '1.52.0' ],
+128 silly audit   'mime-types': [ '2.1.35' ],
+128 silly audit   minimist: [ '1.2.8' ],
+128 silly audit   mnemonist: [ '0.38.3' ],
+128 silly audit   mqtt: [ '5.15.0' ],
+128 silly audit   'mqtt-packet': [ '9.0.2' ],
+128 silly audit   negotiator: [ '0.6.3' ],
+128 silly audit   'number-allocator': [ '1.0.14' ],
+128 silly audit   'object-inspect': [ '1.13.4' ],
+128 silly audit   obliterator: [ '1.6.1' ],
+128 silly audit   'on-finished': [ '2.4.1' ],
+128 silly audit   parseurl: [ '1.3.3' ],
+128 silly audit   'path-expression-matcher': [ '1.2.0' ],
+128 silly audit   'path-to-regexp': [ '0.1.12' ],
+128 silly audit   process: [ '0.11.10' ],
+128 silly audit   'process-nextick-args': [ '2.0.1' ],
+128 silly audit   'proxy-addr': [ '2.0.7' ],
+128 silly audit   'proxy-from-env': [ '1.1.0' ],
+128 silly audit   qs: [ '6.14.2' ],
+128 silly audit   'range-parser': [ '1.2.1' ],
+128 silly audit   'raw-body': [ '2.5.3' ],
+128 silly audit   rfdc: [ '1.4.1' ],
+128 silly audit   'safe-buffer': [ '5.2.1' ],
+128 silly audit   'safer-buffer': [ '2.1.2' ],
+128 silly audit   semver: [ '7.7.4' ],
+128 silly audit   send: [ '0.19.0' ],
+128 silly audit   'serve-static': [ '1.16.2' ],
+128 silly audit   setprototypeof: [ '1.2.0' ],
+128 silly audit   'side-channel': [ '1.1.0' ],
+128 silly audit   'side-channel-list': [ '1.0.0' ],
+128 silly audit   'side-channel-map': [ '1.0.1' ],
+128 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+128 silly audit   'smart-buffer': [ '4.2.0' ],
+128 silly audit   socks: [ '2.8.7' ],
+128 silly audit   split2: [ '4.2.0' ],
+128 silly audit   string_decoder: [ '1.3.0' ],
+128 silly audit   strnum: [ '2.2.1' ],
+128 silly audit   toidentifier: [ '1.0.1' ],
+128 silly audit   tslib: [ '2.8.1' ],
+128 silly audit   'type-is': [ '1.6.18' ],
+128 silly audit   typedarray: [ '0.0.6' ],
+128 silly audit   'undici-types': [ '7.18.2' ],
+128 silly audit   unpipe: [ '1.0.0' ],
+128 silly audit   'util-deprecate': [ '1.0.2' ],
+128 silly audit   'utils-merge': [ '1.0.1' ],
+128 silly audit   vary: [ '1.1.2' ],
+128 silly audit   'worker-factory': [ '7.0.48' ],
+128 silly audit   'worker-timers': [ '8.0.30' ],
+128 silly audit   'worker-timers-broker': [ '8.0.15' ],
+128 silly audit   'worker-timers-worker': [ '9.0.13' ],
+128 silly audit   ws: [ '8.19.0' ]
+128 silly audit }
+129 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1246ms
+130 silly audit report {
+130 silly audit report   axios: [
+130 silly audit report     {
+130 silly audit report       id: 1116673,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-3p68-rc4w-qgx5',
+130 silly audit report       title: 'Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.0',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1116675,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-fvcv-3m26-pcqx',
+130 silly audit report       title: 'Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.0',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117574,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-w9j2-pvgh-6h63',
+130 silly audit report       title: 'Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117576,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-pmwg-cvhr-8vh7',
+130 silly audit report       title: 'Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0',
+130 silly audit report       severity: 'high',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117577,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-3w6x-2g7m-8v23',
+130 silly audit report       title: 'Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.2',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117578,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-q8qp-cvcw-x6jj',
+130 silly audit report       title: 'Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking',
+130 silly audit report       severity: 'high',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.2',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117580,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-xhjh-pmcv-23jw',
+130 silly audit report       title: 'Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams',
+130 silly audit report       severity: 'low',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117581,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-445q-vr5w-6q77',
+130 silly audit report       title: 'Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117583,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-m7pr-hjqh-92cm',
+130 silly audit report       title: 'Axios: no_proxy bypass via IP alias allows SSRF',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117585,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-62hf-57xw-28j9',
+130 silly audit report       title: 'Axios: unbounded recursion in toFormData causes DoS via deeply nested request data',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117587,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-5c9x-8gcm-mpgx',
+130 silly audit report       title: "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117589,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-vf2m-468p-8v99',
+130 silly audit report       title: 'Axios: HTTP adapter streamed responses bypass maxContentLength',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117591,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-pf86-5x62-jrwf',
+130 silly audit report       title: 'Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking',
+130 silly audit report       severity: 'high',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117593,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-6chq-wfr3-2hj9',
+130 silly audit report       title: 'Axios: Header Injection via Prototype Pollution',
+130 silly audit report       severity: 'high',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     },
+130 silly audit report     {
+130 silly audit report       id: 1117595,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-xx6v-rp6x-q39c',
+130 silly audit report       title: 'Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '>=1.0.0 <1.15.1',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     }
+130 silly audit report   ],
+130 silly audit report   'fast-xml-parser': [
+130 silly audit report     {
+130 silly audit report       id: 1116957,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-gh4j-gqv2-49f6',
+130 silly audit report       title: 'fast-xml-parser XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '<5.7.0',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     }
+130 silly audit report   ],
+130 silly audit report   'follow-redirects': [
+130 silly audit report     {
+130 silly audit report       id: 1116560,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-r4q5-vmmm-2653',
+130 silly audit report       title: 'follow-redirects leaks Custom Authentication Headers to Cross-Domain Redirect Targets',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '<=1.15.11',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     }
+130 silly audit report   ],
+130 silly audit report   'ip-address': [
+130 silly audit report     {
+130 silly audit report       id: 1117683,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-v2v4-37r5-5v8g',
+130 silly audit report       title: 'ip-address has XSS in Address6 HTML-emitting methods',
+130 silly audit report       severity: 'moderate',
+130 silly audit report       vulnerable_versions: '<=10.1.0',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     }
+130 silly audit report   ],
+130 silly audit report   'path-to-regexp': [
+130 silly audit report     {
+130 silly audit report       id: 1115527,
+130 silly audit report       url: 'https://github.com/advisories/GHSA-37ch-88jc-xwx2',
+130 silly audit report       title: 'path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters',
+130 silly audit report       severity: 'high',
+130 silly audit report       vulnerable_versions: '<0.1.13',
+130 silly audit report       cwe: [Array],
+130 silly audit report       cvss: [Object]
+130 silly audit report     }
+130 silly audit report   ]
+130 silly audit report }
+131 silly packumentCache corgi:https://registry.npmjs.org/axios cache-miss
+132 silly packumentCache corgi:https://registry.npmjs.org/fast-xml-parser cache-miss
+133 silly packumentCache corgi:https://registry.npmjs.org/follow-redirects cache-miss
+134 silly packumentCache corgi:https://registry.npmjs.org/ip-address cache-miss
+135 silly packumentCache corgi:https://registry.npmjs.org/path-to-regexp cache-miss
+136 http fetch GET 200 https://registry.npmjs.org/path-to-regexp 892ms (cache revalidated)
+137 silly packumentCache corgi:https://registry.npmjs.org/path-to-regexp set size:66575 disposed:false
+138 http fetch GET 200 https://registry.npmjs.org/fast-xml-parser 1071ms (cache miss)
+139 silly packumentCache corgi:https://registry.npmjs.org/fast-xml-parser set size:undefined disposed:false
+140 http fetch GET 200 https://registry.npmjs.org/ip-address 1153ms (cache miss)
+141 silly packumentCache corgi:https://registry.npmjs.org/ip-address set size:undefined disposed:false
+142 http fetch GET 200 https://registry.npmjs.org/follow-redirects 1212ms (cache miss)
+143 silly packumentCache corgi:https://registry.npmjs.org/follow-redirects set size:undefined disposed:false
+144 http fetch GET 200 https://registry.npmjs.org/axios 1293ms (cache updated)
+145 silly packumentCache corgi:https://registry.npmjs.org/axios set size:undefined disposed:false
+146 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fxml-builder cache-miss
+147 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fxml-builder 174ms (cache miss)
+148 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fxml-builder set size:undefined disposed:false
+149 silly packumentCache corgi:https://registry.npmjs.org/socks cache-miss
+150 http fetch GET 200 https://registry.npmjs.org/socks 78ms (cache miss)
+151 silly packumentCache corgi:https://registry.npmjs.org/socks set size:undefined disposed:false
+152 silly packumentCache corgi:https://registry.npmjs.org/express cache-miss
+153 http fetch GET 200 https://registry.npmjs.org/express 198ms (cache updated)
+154 silly packumentCache corgi:https://registry.npmjs.org/express set size:undefined disposed:false
+155 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcore cache-miss
+156 http fetch GET 200 https://registry.npmjs.org/@aws-sdk%2fcore 71ms (cache miss)
+157 silly packumentCache corgi:https://registry.npmjs.org/@aws-sdk%2fcore set size:undefined disposed:false
+158 silly ADD
+159 silly ADD
+160 silly ADD
+161 silly ADD
+162 silly ADD node_modules/ws
+163 silly ADD
+164 silly ADD node_modules/worker-timers-worker
+165 silly ADD node_modules/worker-timers-broker
+166 silly ADD node_modules/worker-timers
+167 silly ADD node_modules/worker-factory
+168 silly ADD
+169 silly ADD node_modules/vary
+170 silly ADD node_modules/utils-merge
+171 silly ADD node_modules/util-deprecate
+172 silly ADD node_modules/unpipe
+173 silly ADD node_modules/undici-types
+174 silly ADD node_modules/typedarray
+175 silly ADD node_modules/type-is
+176 silly ADD node_modules/tslib
+177 silly ADD node_modules/toidentifier
+178 silly ADD
+179 silly ADD
+180 silly ADD node_modules/strnum
+181 silly ADD
+182 silly ADD
+183 silly ADD node_modules/string_decoder
+184 silly ADD node_modules/statuses
+185 silly ADD
+186 silly ADD node_modules/split2
+187 silly ADD
+188 silly ADD node_modules/socks
+189 silly ADD node_modules/smart-buffer
+190 silly ADD node_modules/side-channel-weakmap
+191 silly ADD node_modules/side-channel-map
+192 silly ADD node_modules/side-channel-list
+193 silly ADD node_modules/side-channel
+194 silly ADD node_modules/setprototypeof
+195 silly ADD node_modules/serve-static
+196 silly ADD node_modules/send
+197 silly ADD node_modules/send/node_modules/ms
+198 silly ADD node_modules/send/node_modules/encodeurl
+199 silly ADD
+200 silly ADD node_modules/semver
+201 silly ADD node_modules/safer-buffer
+202 silly ADD node_modules/safe-buffer
+203 silly ADD node_modules/rfdc
+204 silly ADD
+205 silly ADD
+206 silly ADD
+207 silly ADD
+208 silly ADD
+209 silly ADD
+210 silly ADD node_modules/readable-stream
+211 silly ADD node_modules/raw-body
+212 silly ADD node_modules/raw-body/node_modules/statuses
+213 silly ADD node_modules/raw-body/node_modules/http-errors
+214 silly ADD node_modules/range-parser
+215 silly ADD node_modules/qs
+216 silly ADD node_modules/proxy-from-env
+217 silly ADD node_modules/proxy-addr
+218 silly ADD node_modules/process-nextick-args
+219 silly ADD node_modules/process
+220 silly ADD
+221 silly ADD
+222 silly ADD
+223 silly ADD
+224 silly ADD
+225 silly ADD node_modules/path-to-regexp
+226 silly ADD
+227 silly ADD node_modules/path-expression-matcher
+228 silly ADD node_modules/parseurl
+229 silly ADD
+230 silly ADD
+231 silly ADD
+232 silly ADD node_modules/on-finished
+233 silly ADD node_modules/obliterator
+234 silly ADD node_modules/object-inspect
+235 silly ADD node_modules/number-allocator
+236 silly ADD node_modules/number-allocator/node_modules/ms
+237 silly ADD node_modules/number-allocator/node_modules/debug
+238 silly ADD node_modules/negotiator
+239 silly ADD
+240 silly ADD
+241 silly ADD node_modules/minimatch
+242 silly ADD node_modules/brace-expansion
+243 silly ADD node_modules/ms
+244 silly ADD node_modules/mqtt-packet
+245 silly ADD node_modules/mqtt-packet/node_modules/ms
+246 silly ADD node_modules/mqtt-packet/node_modules/debug
+247 silly ADD node_modules/mqtt
+248 silly ADD node_modules/mqtt/node_modules/ms
+249 silly ADD node_modules/mqtt/node_modules/debug
+250 silly ADD node_modules/mnemonist
+251 silly ADD node_modules/minimist
+252 silly ADD
+253 silly ADD node_modules/mime-types
+254 silly ADD node_modules/mime-db
+255 silly ADD node_modules/mime
+256 silly ADD
+257 silly ADD node_modules/methods
+258 silly ADD node_modules/merge-descriptors
+259 silly ADD node_modules/media-typer
+260 silly ADD node_modules/math-intrinsics
+261 silly ADD
+262 silly ADD node_modules/lru-cache
+263 silly ADD node_modules/lodash.once
+264 silly ADD node_modules/lodash.isstring
+265 silly ADD node_modules/lodash.isplainobject
+266 silly ADD node_modules/lodash.isnumber
+267 silly ADD node_modules/lodash.isinteger
+268 silly ADD node_modules/lodash.isboolean
+269 silly ADD node_modules/lodash.includes
+270 silly ADD
+271 silly ADD
+272 silly ADD node_modules/jws
+273 silly ADD node_modules/jwa
+274 silly ADD node_modules/jsonwebtoken
+275 silly ADD node_modules/jsonwebtoken/node_modules/ms
+276 silly ADD
+277 silly ADD
+278 silly ADD
+279 silly ADD
+280 silly ADD
+281 silly ADD node_modules/js-sdsl
+282 silly ADD
+283 silly ADD
+284 silly ADD
+285 silly ADD
+286 silly ADD
+287 silly ADD
+288 silly ADD
+289 silly ADD
+290 silly ADD node_modules/ipaddr.js
+291 silly ADD node_modules/ip-address
+292 silly ADD
+293 silly ADD node_modules/inherits
+294 silly ADD
+295 silly ADD node_modules/resolve-from
+296 silly ADD
+297 silly ADD node_modules/ieee754
+298 silly ADD node_modules/iconv-lite
+299 silly ADD node_modules/http-errors
+300 silly ADD
+301 silly ADD node_modules/help-me
+302 silly ADD node_modules/hasown
+303 silly ADD node_modules/has-tostringtag
+304 silly ADD node_modules/has-symbols
+305 silly ADD node_modules/gopd
+306 silly ADD
+307 silly ADD
+308 silly ADD node_modules/get-proto
+309 silly ADD node_modules/get-intrinsic
+310 silly ADD
+311 silly ADD node_modules/function-bind
+312 silly ADD node_modules/fresh
+313 silly ADD node_modules/forwarded
+314 silly ADD node_modules/form-data
+315 silly ADD node_modules/follow-redirects
+316 silly ADD
+317 silly ADD node_modules/finalhandler
+318 silly ADD
+319 silly ADD node_modules/fast-xml-parser
+320 silly ADD node_modules/fast-xml-builder
+321 silly ADD node_modules/fast-unique-numbers
+322 silly ADD node_modules/express
+323 silly ADD
+324 silly ADD node_modules/events
+325 silly ADD node_modules/event-target-shim
+326 silly ADD node_modules/etag
+327 silly ADD
+328 silly ADD
+329 silly ADD node_modules/escape-html
+330 silly ADD
+331 silly ADD node_modules/es-set-tostringtag
+332 silly ADD node_modules/es-object-atoms
+333 silly ADD node_modules/es-errors
+334 silly ADD node_modules/es-define-property
+335 silly ADD
+336 silly ADD
+337 silly ADD node_modules/encodeurl
+338 silly ADD
+339 silly ADD node_modules/ee-first
+340 silly ADD node_modules/ecdsa-sig-formatter
+341 silly ADD node_modules/dunder-proto
+342 silly ADD node_modules/dotenv
+343 silly ADD
+344 silly ADD node_modules/destroy
+345 silly ADD
+346 silly ADD node_modules/depd
+347 silly ADD
+348 silly ADD node_modules/ms
+349 silly ADD node_modules/debug
+350 silly ADD node_modules/delayed-stream
+351 silly ADD node_modules/debug
+352 silly ADD
+353 silly ADD node_modules/cookie-signature
+354 silly ADD node_modules/cookie-parser
+355 silly ADD node_modules/cookie
+356 silly ADD node_modules/content-type
+357 silly ADD node_modules/content-disposition
+358 silly ADD node_modules/concat-stream
+359 silly ADD node_modules/concat-stream/node_modules/readable-stream
+360 silly ADD
+361 silly ADD node_modules/commist
+362 silly ADD node_modules/combined-stream
+363 silly ADD
+364 silly ADD
+365 silly ADD
+366 silly ADD
+367 silly ADD
+368 silly ADD
+369 silly ADD node_modules/call-bound
+370 silly ADD node_modules/call-bind-apply-helpers
+371 silly ADD node_modules/bytes
+372 silly ADD node_modules/buffer-from
+373 silly ADD node_modules/buffer-equal-constant-time
+374 silly ADD node_modules/buffer
+375 silly ADD node_modules/broker-factory
+376 silly ADD
+377 silly ADD
+378 silly ADD node_modules/bowser
+379 silly ADD node_modules/body-parser
+380 silly ADD node_modules/body-parser/node_modules/statuses
+381 silly ADD node_modules/body-parser/node_modules/http-errors
+382 silly ADD node_modules/bl
+383 silly ADD node_modules/bcryptjs
+384 silly ADD node_modules/base64-js
+385 silly ADD
+386 silly ADD node_modules/axios
+387 silly ADD node_modules/asynckit
+388 silly ADD
+389 silly ADD
+390 silly ADD node_modules/array-flatten
+391 silly ADD
+392 silly ADD
+393 silly ADD
+394 silly ADD
+395 silly ADD node_modules/accepts
+396 silly ADD node_modules/abort-controller
+397 silly ADD
+398 silly ADD
+399 silly ADD
+400 silly ADD
+401 silly ADD
+402 silly ADD node_modules/@types/ws
+403 silly ADD node_modules/@types/readable-stream
+404 silly ADD
+405 silly ADD node_modules/@types/node
+406 silly ADD
+407 silly ADD node_modules/@smithy/uuid
+408 silly ADD node_modules/@smithy/util-waiter
+409 silly ADD node_modules/@smithy/util-utf8
+410 silly ADD node_modules/@smithy/util-uri-escape
+411 silly ADD node_modules/@smithy/util-stream
+412 silly ADD node_modules/@smithy/util-retry
+413 silly ADD node_modules/@smithy/util-middleware
+414 silly ADD node_modules/@smithy/util-hex-encoding
+415 silly ADD node_modules/@smithy/util-endpoints
+416 silly ADD node_modules/@smithy/util-defaults-mode-node
+417 silly ADD node_modules/@smithy/util-defaults-mode-browser
+418 silly ADD node_modules/@smithy/util-config-provider
+419 silly ADD node_modules/@smithy/util-buffer-from
+420 silly ADD node_modules/@smithy/util-body-length-node
+421 silly ADD node_modules/@smithy/util-body-length-browser
+422 silly ADD node_modules/@smithy/util-base64
+423 silly ADD node_modules/@smithy/url-parser
+424 silly ADD node_modules/@smithy/types
+425 silly ADD node_modules/@smithy/smithy-client
+426 silly ADD node_modules/@smithy/signature-v4
+427 silly ADD node_modules/@smithy/shared-ini-file-loader
+428 silly ADD node_modules/@smithy/service-error-classification
+429 silly ADD node_modules/@smithy/querystring-parser
+430 silly ADD node_modules/@smithy/querystring-builder
+431 silly ADD node_modules/@smithy/protocol-http
+432 silly ADD node_modules/@smithy/property-provider
+433 silly ADD node_modules/@smithy/node-http-handler
+434 silly ADD node_modules/@smithy/node-config-provider
+435 silly ADD node_modules/@smithy/middleware-stack
+436 silly ADD node_modules/@smithy/middleware-serde
+437 silly ADD node_modules/@smithy/middleware-retry
+438 silly ADD node_modules/@smithy/middleware-endpoint
+439 silly ADD node_modules/@smithy/middleware-content-length
+440 silly ADD node_modules/@smithy/is-array-buffer
+441 silly ADD node_modules/@smithy/invalid-dependency
+442 silly ADD node_modules/@smithy/hash-node
+443 silly ADD node_modules/@smithy/fetch-http-handler
+444 silly ADD node_modules/@smithy/eventstream-serde-universal
+445 silly ADD node_modules/@smithy/eventstream-serde-node
+446 silly ADD node_modules/@smithy/eventstream-serde-config-resolver
+447 silly ADD node_modules/@smithy/eventstream-serde-browser
+448 silly ADD node_modules/@smithy/eventstream-codec
+449 silly ADD node_modules/@smithy/credential-provider-imds
+450 silly ADD node_modules/@smithy/core
+451 silly ADD node_modules/@smithy/config-resolver
+452 silly ADD node_modules/@smithy/abort-controller
+453 silly ADD
+454 silly ADD
+455 silly ADD
+456 silly ADD
+457 silly ADD
+458 silly ADD
+459 silly ADD node_modules/ms
+460 silly ADD node_modules/debug
+461 silly ADD
+462 silly ADD node_modules/@babel/runtime
+463 silly ADD
+464 silly ADD
+465 silly ADD
+466 silly ADD
+467 silly ADD
+468 silly ADD
+469 silly ADD node_modules/@aws/lambda-invoke-store
+470 silly ADD node_modules/@aws-sdk/xml-builder
+471 silly ADD node_modules/@aws-sdk/util-user-agent-node
+472 silly ADD node_modules/@aws-sdk/util-user-agent-browser
+473 silly ADD node_modules/@aws-sdk/util-locate-window
+474 silly ADD node_modules/@aws-sdk/util-format-url
+475 silly ADD node_modules/@aws-sdk/util-endpoints
+476 silly ADD node_modules/@aws-sdk/util-dynamodb
+477 silly ADD node_modules/@aws-sdk/types
+478 silly ADD node_modules/@aws-sdk/token-providers
+479 silly ADD node_modules/@aws-sdk/region-config-resolver
+480 silly ADD node_modules/@aws-sdk/nested-clients
+481 silly ADD node_modules/@aws-sdk/middleware-websocket
+482 silly ADD node_modules/@aws-sdk/middleware-user-agent
+483 silly ADD node_modules/@aws-sdk/middleware-sdk-ec2
+484 silly ADD node_modules/@aws-sdk/middleware-recursion-detection
+485 silly ADD node_modules/@aws-sdk/middleware-logger
+486 silly ADD node_modules/@aws-sdk/middleware-host-header
+487 silly ADD node_modules/@aws-sdk/middleware-eventstream
+488 silly ADD node_modules/@aws-sdk/middleware-endpoint-discovery
+489 silly ADD node_modules/@aws-sdk/lib-dynamodb
+490 silly ADD node_modules/@aws-sdk/eventstream-handler-node
+491 silly ADD node_modules/@aws-sdk/endpoint-cache
+492 silly ADD node_modules/@aws-sdk/dynamodb-codec
+493 silly ADD node_modules/@aws-sdk/credential-provider-web-identity
+494 silly ADD node_modules/@aws-sdk/credential-provider-sso
+495 silly ADD node_modules/@aws-sdk/credential-provider-process
+496 silly ADD node_modules/@aws-sdk/credential-provider-node
+497 silly ADD node_modules/@aws-sdk/credential-provider-login
+498 silly ADD node_modules/@aws-sdk/credential-provider-ini
+499 silly ADD node_modules/@aws-sdk/credential-provider-http
+500 silly ADD node_modules/@aws-sdk/credential-provider-env
+501 silly ADD node_modules/@aws-sdk/core
+502 silly ADD node_modules/@aws-sdk/client-sns
+503 silly ADD node_modules/@aws-sdk/client-lambda
+504 silly ADD node_modules/@aws-sdk/client-ec2
+505 silly ADD node_modules/@aws-sdk/client-dynamodb
+506 silly ADD node_modules/@aws-sdk/client-bedrock-runtime
+507 silly ADD node_modules/@aws-crypto/util
+508 silly ADD node_modules/@aws-crypto/util/node_modules/@smithy/util-utf8
+509 silly ADD node_modules/@aws-crypto/util/node_modules/@smithy/util-buffer-from
+510 silly ADD node_modules/@aws-crypto/util/node_modules/@smithy/is-array-buffer
+511 silly ADD node_modules/@aws-crypto/supports-web-crypto
+512 silly ADD node_modules/@aws-crypto/sha256-js
+513 silly ADD node_modules/@aws-crypto/sha256-browser
+514 silly ADD node_modules/@aws-crypto/sha256-browser/node_modules/@smithy/util-utf8
+515 silly ADD node_modules/@aws-crypto/sha256-browser/node_modules/@smithy/util-buffer-from
+516 silly ADD node_modules/@aws-crypto/sha256-browser/node_modules/@smithy/is-array-buffer
+517 silly ADD node_modules/@aws-crypto/crc32
+518 verbose cwd /home/ec2-user/powerpulse
+519 verbose os Linux 6.1.163-186.299.amzn2023.x86_64
+520 verbose node v20.20.1
+521 verbose npm  v10.8.2
+522 notice
+522 notice New major version of npm available! 10.8.2 -> 11.14.0
+522 notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.0
+522 notice To update run: npm install -g npm@11.14.0
+522 notice  { force: true, [Symbol(proc-log.meta)]: true }
+523 verbose exit 0
+524 info ok

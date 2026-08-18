@@ -1,0 +1,503 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling Only */
+body {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  min-height: 100vh;
+  text-align: justify;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* Container: Centers content and separates structure */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 60px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: justify;
+
+  display: flex;                 /* Flex layout */
+  flex-direction: column;       /* Stack children vertically */
+  justify-content: center;      /* Center vertically */
+  align-items: center;          /* Center horizontally */
+  text-align: center;           /* Center text */
+}
+
+
+.hero h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-indent: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #2c3e50;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+.nav-left .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* Navbar Styling */
+.navbar .nav-links {
+  display: flex;
+  justify-content: center; /* Centers list items horizontally */
+  align-items: center;     /* Centers list items vertically */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;   /* Makes each list item an inline-block */
+  text-align: center;      /* Ensures the text inside each list item is centered */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  display: block;          /* Ensures the link takes the full width of the list item */
+
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Apply link styles to dark mode button */
+.nav-links li button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.2rem;  /* Same font size as the links */
+  padding: 10px;
+  display: block;          /* Ensures the button takes the full width of the list item */
+  text-align: center;     /* Ensure the button matches the padding of links */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Same hover effect as links */
+  border-radius: 5px; /* Matching border radius */
+  transform: scale(1.1); /* Hover effect for button */
+}
+
+/* Dark Mode Button Styling */
+.dark-mode-btn {
+  background: transparent; /* Transparent background for the button */
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 15px; /* Padding to make button look consistent */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+  transform: scale(1.1); /* Button grows slightly on hover */
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center;      /* Center vertically (if needed) */
+  text-align: center;       /* Optional: center text inside items */
+  margin-top: 40px;         /* Optional: spacing from the top */
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: #ffd700;
+  color: #2c3e50;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+/* Footer Section */
+footer {
+  margin-top: 60px;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Dark mode support */
+body.dark-mode footer {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* How It Works Section */
+#how-it-works {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.how-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.how-step {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.how-step:hover {
+  transform: translateY(-5px);
+}
+
+.how-step img {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.how-step h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.how-step p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Dark Mode Support */
+body.dark-mode .how-step {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .how-step h3 {
+  color: #f5f5f5;
+}
+
+body.dark-mode .how-step p {
+  color: #ccc;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(20deg);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #f5f5f5;
+}
+
+body.dark-mode .hero,
+body.dark-mode .feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
+}
+
+body.dark-mode .cta-button,
+body.dark-mode #contact-form button {
+  background-color: #f5f5f5;
+  color: #121212;
+}
+
+body.dark-mode .cta-button:hover,
+body.dark-mode #contact-form button:hover {
+  background-color: #e0e0e0;
+}
+
+body.dark-mode footer {
+  color: #aaa;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+#features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.feature-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#contact {
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  margin: 60px auto; /* Horizontally center */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+#contact h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  resize: vertical;
+  transition: background 0.3s ease;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+#contact-form button {
+  background-color: #ffd700;
+  color: #2c3e50;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact-form button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#form-message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 2.2rem;
+  }
+
+  .hero p {
+      font-size: 1.05rem;
+      text-indent: 20px;
+  }
+
+  .cta-button {
+      font-size: 1rem;
+      padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      padding: 35px 20px;
+  }
+
+  .hero h1 {
+      font-size: 1.8rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+      text-indent: 15px;
+  }
+
+  .cta-button {
+      font-size: 0.95rem;
+      padding: 10px 16px;
+  }
+
+  .footer {
+      font-size: 0.8rem;
+  }
+}

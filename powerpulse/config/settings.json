@@ -1,0 +1,38 @@
+{
+  "general": {
+    "theme": "dark",
+    "refreshInterval": 30,
+    "sidebarCollapsed": false
+  },
+  "charts": {
+    "maxDataPoints": 20,
+    "yAxisMode": "auto",
+    "animation": false,
+    "showChartToolbar": true
+  },
+  "alerts": {
+    "voltageMin": 180,
+    "voltageMax": 250,
+    "currentMax": 100,
+    "pfMin": 0.8,
+    "thdMax": 10,
+    "cooldownSeconds": 300,
+    "custom": []
+  },
+  "ai": {
+    "bedrockApiKey": "ABSKQmVkcm9ja0FQSUtleS1qNGpsLWF0LTU1OTA1MDI0NTU4Njo4aVlhNWk3Qkp6VXlxMm9teEdabGtSaEFSeGw0bDg3TEtXZ21DdmR4QlczUDQwRkoyVGQxczJQODJZdz0=",
+    "openaiApiKey": "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",
+    "modelId": "meta.llama3-70b-instruct-v1:0",
+    "maxTokens": 1920,
+    "temperature": 0.4
+  },
+  "reports": {
+    "companyName": "PowerPulse",
+    "electricityRate": 8,
+    "currency": "₹",
+    "includeCost": true,
+    "kvahRate": 6,
+    "billingType": "kwh",
+    "includeKvah": true
+  }
+}

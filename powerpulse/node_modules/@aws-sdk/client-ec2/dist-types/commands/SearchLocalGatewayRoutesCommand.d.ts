@@ -1,0 +1,100 @@
+import { Command as $Command } from "@smithy/smithy-client";
+import type { MetadataBearer as __MetadataBearer } from "@smithy/types";
+import type { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
+import type { SearchLocalGatewayRoutesRequest, SearchLocalGatewayRoutesResult } from "../models/models_7";
+/**
+ * @public
+ */
+export type { __MetadataBearer };
+export { $Command };
+/**
+ * @public
+ *
+ * The input for {@link SearchLocalGatewayRoutesCommand}.
+ */
+export interface SearchLocalGatewayRoutesCommandInput extends SearchLocalGatewayRoutesRequest {
+}
+/**
+ * @public
+ *
+ * The output of {@link SearchLocalGatewayRoutesCommand}.
+ */
+export interface SearchLocalGatewayRoutesCommandOutput extends SearchLocalGatewayRoutesResult, __MetadataBearer {
+}
+declare const SearchLocalGatewayRoutesCommand_base: {
+    new (input: SearchLocalGatewayRoutesCommandInput): import("@smithy/smithy-client").CommandImpl<SearchLocalGatewayRoutesCommandInput, SearchLocalGatewayRoutesCommandOutput, EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes>;
+    new (input: SearchLocalGatewayRoutesCommandInput): import("@smithy/smithy-client").CommandImpl<SearchLocalGatewayRoutesCommandInput, SearchLocalGatewayRoutesCommandOutput, EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes>;
+    getEndpointParameterInstructions(): import("@smithy/middleware-endpoint").EndpointParameterInstructions;
+};
+/**
+ * <p>Searches for routes in the specified local gateway route table.</p>
+ * @example
+ * Use a bare-bones client and the command you need to make an API call.
+ * ```javascript
+ * import { EC2Client, SearchLocalGatewayRoutesCommand } from "@aws-sdk/client-ec2"; // ES Modules import
+ * // const { EC2Client, SearchLocalGatewayRoutesCommand } = require("@aws-sdk/client-ec2"); // CommonJS import
+ * // import type { EC2ClientConfig } from "@aws-sdk/client-ec2";
+ * const config = {}; // type is EC2ClientConfig
+ * const client = new EC2Client(config);
+ * const input = { // SearchLocalGatewayRoutesRequest
+ *   LocalGatewayRouteTableId: "STRING_VALUE", // required
+ *   Filters: [ // FilterList
+ *     { // Filter
+ *       Name: "STRING_VALUE",
+ *       Values: [ // ValueStringList
+ *         "STRING_VALUE",
+ *       ],
+ *     },
+ *   ],
+ *   MaxResults: Number("int"),
+ *   NextToken: "STRING_VALUE",
+ *   DryRun: true || false,
+ * };
+ * const command = new SearchLocalGatewayRoutesCommand(input);
+ * const response = await client.send(command);
+ * // { // SearchLocalGatewayRoutesResult
+ * //   Routes: [ // LocalGatewayRouteList
+ * //     { // LocalGatewayRoute
+ * //       DestinationCidrBlock: "STRING_VALUE",
+ * //       LocalGatewayVirtualInterfaceGroupId: "STRING_VALUE",
+ * //       Type: "static" || "propagated",
+ * //       State: "pending" || "active" || "blackhole" || "deleting" || "deleted",
+ * //       LocalGatewayRouteTableId: "STRING_VALUE",
+ * //       LocalGatewayRouteTableArn: "STRING_VALUE",
+ * //       OwnerId: "STRING_VALUE",
+ * //       SubnetId: "STRING_VALUE",
+ * //       CoipPoolId: "STRING_VALUE",
+ * //       NetworkInterfaceId: "STRING_VALUE",
+ * //       DestinationPrefixListId: "STRING_VALUE",
+ * //     },
+ * //   ],
+ * //   NextToken: "STRING_VALUE",
+ * // };
+ *
+ * ```
+ *
+ * @param SearchLocalGatewayRoutesCommandInput - {@link SearchLocalGatewayRoutesCommandInput}
+ * @returns {@link SearchLocalGatewayRoutesCommandOutput}
+ * @see {@link SearchLocalGatewayRoutesCommandInput} for command's `input` shape.
+ * @see {@link SearchLocalGatewayRoutesCommandOutput} for command's `response` shape.
+ * @see {@link EC2ClientResolvedConfig | config} for EC2Client's `config` shape.
+ *
+ * @throws {@link EC2ServiceException}
+ * <p>Base exception class for all service exceptions from EC2 service.</p>
+ *
+ *
+ * @public
+ */
+export declare class SearchLocalGatewayRoutesCommand extends SearchLocalGatewayRoutesCommand_base {
+    /** @internal type navigation helper, not in runtime. */
+    protected static __types: {
+        api: {
+            input: SearchLocalGatewayRoutesRequest;
+            output: SearchLocalGatewayRoutesResult;
+        };
+        sdk: {
+            input: SearchLocalGatewayRoutesCommandInput;
+            output: SearchLocalGatewayRoutesCommandOutput;
+        };
+    };
+}

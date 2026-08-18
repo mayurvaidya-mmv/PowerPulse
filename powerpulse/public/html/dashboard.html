@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerPulse — Smart Energy Dashboard</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/public/css/chatbot.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/public/js/config.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-overlay"></div>
+      <div class="sidebar-header">
+        <h2><i class="fas fa-bolt"></i> PowerPulse</h2>
+        <button id="toggleSidebar" title="Toggle Sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <ul class="nav-list">
+        <li class="active"><a href="/dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+        <li><a href="/stored-data"><i class="fas fa-table"></i><span>Data Table</span></a></li>
+        <li><a href="/reports"><i class="fas fa-chart-bar"></i><span>Reports</span></a></li>
+        <li><a href="/settings"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        <li><a href="/register-config"><i class="fas fa-microchip"></i><span>Register Config</span></a></li>
+        <li><a href="#historySection"><i class="fas fa-chart-line"></i><span>History</span></a></li>
+
+        <li class="admin-nav-item" style="display:none;"><a href="#lambdaSection"><i class="fas fa-code"></i><span>Lambda</span></a></li>
+        <li class="admin-nav-item" style="display:none;"><a href="#snsSection"><i class="fas fa-bell"></i><span>SNS Alerts</span></a></li>
+      </ul>
+
+
+      <footer class="sidebar-footer">
+        <small>v2.0 — © PowerPulse</small>
+      </footer>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <h1>⚡ PowerPulse Energy Dashboard</h1>
+          <p class="subtitle">Real-time Grid & Generator Analytics</p>
+        </div>
+        <div class="header-actions">
+          <div id="connectionStatus" class="status-badge">Connecting...</div>
+          <div id="userProfile"
+            style="display: flex; align-items: center; gap: 8px; background: rgba(99,102,241,0.15); padding: 6px 14px; border-radius: 10px; border: 1px solid rgba(99,102,241,0.25);">
+            <i class="fas fa-user-circle" style="font-size: 1.2rem; color: #818cf8;"></i>
+            <span id="userName" style="font-weight: 600; font-size: 0.85rem;">...</span>
+            <span id="userRole"
+              style="font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; text-transform: uppercase;"></span>
+          </div>
+          <button id="themeToggle">🌙 Dark Mode</button>
+          <a href="/api/auth/logout" id="logoutBtn"
+            style="padding: 8px 16px; background: #ef4444; color: white; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: background 0.2s;">🚪
+            Logout</a>
+        </div>
+      </header>
+
+      <!-- ⚡ vs 🔧 LIVE COMPARISON PANEL -->
+      <section class="section comparison-section">
+        <div class="section-header">
+          <h2><i class="fas fa-balance-scale"></i> Live Source Comparison</h2>
+          <span class="section-divider"></span>
+        </div>
+        <div class="comparison-grid">
+          <div class="comparison-col grid-col">
+            <div class="comparison-source-title">
+              <span id="gridStatusBadge" class="source-status-badge offline">⚫ No Data</span>
+              <h3>⚡ Grid</h3>
+              <small id="gridLastUpdate" class="last-update">Never</small>
+            </div>
+            <div id="cmpGridStats" class="comparison-stats"></div>
+          </div>
+          <div class="comparison-divider"><i class="fas fa-exchange-alt"></i></div>
+          <div class="comparison-col gen-col">
+            <div class="comparison-source-title">
+              <span id="genStatusBadge" class="source-status-badge offline">⚫ No Data</span>
+              <h3>🔧 Generator</h3>
+              <small id="genLastUpdate" class="last-update">Never</small>
+            </div>
+            <div id="cmpGenStats" class="comparison-stats"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID SECTION -->
+      <section class="section grid-section">
+        <div class="section-header">
+          <h2><i class="fas fa-city"></i> Grid Meter — Three Phase</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div id="gridCardsContainer" class="cards-container">
+          <!-- Dynamically generated from register config -->
+        </div>
+
+        <div class="charts-row">
+          <div class="chart-container">
+            <h3>Grid Voltage Trends</h3>
+            <div class="chart-toolbar">
+              <div class="chart-toolbar-group"><label>Y:</label>
+                <select class="chart-scale-mode" data-chart="gridVoltageChart" data-axis="y"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="gridVoltageChart" data-axis="y" placeholder="Min" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="gridVoltageChart" data-axis="y" placeholder="Max" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>X:</label>
+                <select class="chart-scale-mode" data-chart="gridVoltageChart" data-axis="x"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="gridVoltageChart" data-axis="x" placeholder="Start" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="gridVoltageChart" data-axis="x" placeholder="End" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>Points:</label>
+                <input type="range" class="chart-points-slider" data-chart="gridVoltageChart" min="10" max="100" value="20" />
+                <span class="chart-points-value">20</span>
+              </div>
+            </div>
+            <canvas id="gridVoltageChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Grid Current Trends</h3>
+            <div class="chart-toolbar">
+              <div class="chart-toolbar-group"><label>Y:</label>
+                <select class="chart-scale-mode" data-chart="gridCurrentChart" data-axis="y"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="gridCurrentChart" data-axis="y" placeholder="Min" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="gridCurrentChart" data-axis="y" placeholder="Max" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>X:</label>
+                <select class="chart-scale-mode" data-chart="gridCurrentChart" data-axis="x"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="gridCurrentChart" data-axis="x" placeholder="Start" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="gridCurrentChart" data-axis="x" placeholder="End" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>Points:</label>
+                <input type="range" class="chart-points-slider" data-chart="gridCurrentChart" min="10" max="100" value="20" />
+                <span class="chart-points-value">20</span>
+              </div>
+            </div>
+            <canvas id="gridCurrentChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- GENERATOR SECTION -->
+      <section class="section generator-section">
+        <div class="section-header">
+          <h2><i class="fas fa-cogs"></i> Generator Meter — Three Phase</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div id="generatorCardsContainer" class="cards-container">
+          <!-- Dynamically generated from register config -->
+        </div>
+
+        <div class="charts-row">
+          <div class="chart-container">
+            <h3>Generator Voltage Trends</h3>
+            <div class="chart-toolbar">
+              <div class="chart-toolbar-group"><label>Y:</label>
+                <select class="chart-scale-mode" data-chart="generatorVoltageChart" data-axis="y"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="generatorVoltageChart" data-axis="y" placeholder="Min" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="generatorVoltageChart" data-axis="y" placeholder="Max" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>X:</label>
+                <select class="chart-scale-mode" data-chart="generatorVoltageChart" data-axis="x"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="generatorVoltageChart" data-axis="x" placeholder="Start" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="generatorVoltageChart" data-axis="x" placeholder="End" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>Points:</label>
+                <input type="range" class="chart-points-slider" data-chart="generatorVoltageChart" min="10" max="100" value="20" />
+                <span class="chart-points-value">20</span>
+              </div>
+            </div>
+            <canvas id="generatorVoltageChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3>Generator Current Trends</h3>
+            <div class="chart-toolbar">
+              <div class="chart-toolbar-group"><label>Y:</label>
+                <select class="chart-scale-mode" data-chart="generatorCurrentChart" data-axis="y"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="generatorCurrentChart" data-axis="y" placeholder="Min" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="generatorCurrentChart" data-axis="y" placeholder="Max" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>X:</label>
+                <select class="chart-scale-mode" data-chart="generatorCurrentChart" data-axis="x"><option value="auto">Auto</option><option value="manual">Manual</option></select>
+                <input type="number" class="chart-axis-min" data-chart="generatorCurrentChart" data-axis="x" placeholder="Start" style="display:none;" />
+                <input type="number" class="chart-axis-max" data-chart="generatorCurrentChart" data-axis="x" placeholder="End" style="display:none;" />
+              </div>
+              <div class="chart-toolbar-group"><label>Points:</label>
+                <input type="range" class="chart-points-slider" data-chart="generatorCurrentChart" min="10" max="100" value="20" />
+                <span class="chart-points-value">20</span>
+              </div>
+            </div>
+            <canvas id="generatorCurrentChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- HISTORIC TRENDS SECTION -->
+      <section id="historySection" class="section history-section">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-line"></i> Historic Trends</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="history-controls">
+          <div class="history-selectors">
+            <div class="history-range-group">
+              <label for="historyRange" class="control-label">📊 Time Range</label>
+              <select id="historyRange" class="history-dropdown">
+                <option value="daily" selected>📅 Daily (24h)</option>
+                <option value="weekly">📆 Weekly (7 days)</option>
+                <option value="monthly">🗓️ Monthly (30 days)</option>
+                <option value="yearly">📊 Yearly (12 months)</option>
+                <option value="custom">🔧 Custom Range</option>
+              </select>
+            </div>
+            <div class="history-source-group">
+              <label for="historySource" class="control-label">⚡ Source</label>
+              <select id="historySource" class="history-dropdown">
+                <option value="grid">⚡ Grid</option>
+                <option value="generator">🔧 Generator</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="customDateRange" class="custom-date-range" style="display:none;">
+          <div class="date-input-group">
+            <label for="historyStartDate" class="control-label">From</label>
+            <input type="date" id="historyStartDate">
+          </div>
+          <div class="date-input-group">
+            <label for="historyEndDate" class="control-label">To</label>
+            <input type="date" id="historyEndDate">
+          </div>
+          <button id="loadCustomHistory" class="action-btn load-custom-btn"><i class="fas fa-search"></i> Load</button>
+        </div>
+
+        <!-- Parameter Selector Pills -->
+        <div class="history-param-selector">
+          <span class="param-selector-label">Parameters:</span>
+          <div id="historyParamPills" class="param-pills-container">
+            <!-- Dynamically generated -->
+          </div>
+          <button id="historyParamToggleAll" class="param-toggle-all" title="Toggle All">All</button>
+        </div>
+
+        <div id="historyStatus" class="history-status"></div>
+
+        <div id="historyChartsGrid" class="history-charts-grid">
+          <!-- Dynamically generated chart cards based on selected parameters -->
+        </div>
+      </section>
+
+      <!-- LAMBDA FUNCTIONS SECTION (Admin Only) -->
+      <section id="lambdaSection" class="section lambda-section admin-section" style="display:none;">
+        <div class="section-header">
+          <h2><i class="fas fa-code"></i> AWS Lambda Functions</h2>
+          <button id="refreshLambdaBtn" class="action-btn refresh-btn" title="Refresh"><i class="fas fa-sync-alt"></i> Refresh</button>
+        </div>
+
+        <div id="lambdaFunctionsList" class="aws-panel">
+          <div class="panel-loading"><i class="fas fa-spinner fa-spin"></i> Loading Lambda functions...</div>
+        </div>
+
+        <!-- Invoke Modal -->
+        <div id="lambdaInvokeModal" class="modal-overlay" style="display:none;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3><i class="fas fa-play"></i> Invoke Function</h3>
+              <button id="closeLambdaModal" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-fn-name">Function: <strong id="invokeModalFnName"></strong></p>
+              <label for="invokePayloadInput">JSON Payload:</label>
+              <textarea id="invokePayloadInput" rows="6" placeholder='{"key": "value"}'>{}</textarea>
+              <div class="modal-actions">
+                <button id="invokeConfirmBtn" class="action-btn invoke-btn"><i class="fas fa-play"></i> Invoke</button>
+              </div>
+              <div id="invokeResultArea" class="result-area" style="display:none;">
+                <h4>Result:</h4>
+                <pre id="invokeResultPre"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SNS NOTIFICATIONS SECTION (Admin Only) -->
+      <section id="snsSection" class="section sns-section admin-section" style="display:none;">
+        <div class="section-header">
+          <h2><i class="fas fa-bell"></i> SNS Notifications</h2>
+          <button id="refreshSnsBtn" class="action-btn refresh-btn" title="Refresh"><i class="fas fa-sync-alt"></i> Refresh</button>
+        </div>
+
+        <div class="sns-grid">
+          <!-- Subscriptions List -->
+          <div class="aws-panel">
+            <h3 class="panel-title"><i class="fas fa-list"></i> Current Subscriptions</h3>
+            <div id="snsSubscriptionsList">
+              <div class="panel-loading"><i class="fas fa-spinner fa-spin"></i> Loading subscriptions...</div>
+            </div>
+          </div>
+
+          <!-- Subscribe Form + Test Alert -->
+          <div class="aws-panel">
+            <h3 class="panel-title"><i class="fas fa-plus-circle"></i> Add Subscription</h3>
+            <form id="snsSubscribeForm" class="sns-form">
+              <div class="form-group">
+                <label for="snsProtocol">Protocol:</label>
+                <select id="snsProtocol">
+                  <option value="email">📧 Email</option>
+                  <option value="sms">📱 SMS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="snsEndpoint">Endpoint:</label>
+                <input type="text" id="snsEndpoint" placeholder="email@example.com or +1234567890" required />
+              </div>
+              <button type="submit" class="action-btn subscribe-btn"><i class="fas fa-plus"></i> Subscribe</button>
+            </form>
+
+            <hr class="panel-divider" />
+
+            <h3 class="panel-title"><i class="fas fa-mobile-alt"></i> SMS Sandbox Verification</h3>
+            <p style="font-size:0.8rem;color:#94a3b8;margin-bottom:10px;">Verify phone numbers in the AWS SMS Sandbox so they can receive alerts.</p>
+            <div class="sns-form">
+              <div class="form-group">
+                <label for="sandboxPhone">Phone Number (E.164):</label>
+                <input type="text" id="sandboxPhone" placeholder="+919876543210" />
+              </div>
+              <button id="sendOtpBtn" class="action-btn subscribe-btn"><i class="fas fa-sms"></i> Send OTP</button>
+              <div id="otpVerifyArea" style="display:none;">
+                <div class="form-group" style="margin-top:10px;">
+                  <label for="sandboxOtp">Enter OTP:</label>
+                  <input type="text" id="sandboxOtp" placeholder="123456" />
+                </div>
+                <button id="verifyOtpBtn" class="action-btn test-alert-btn"><i class="fas fa-check-circle"></i> Verify</button>
+              </div>
+            </div>
+
+            <hr class="panel-divider" />
+
+            <h3 class="panel-title"><i class="fas fa-paper-plane"></i> Test Alert</h3>
+            <form id="snsTestAlertForm" class="sns-form">
+              <div class="form-group">
+                <label for="testAlertSubject">Subject:</label>
+                <input type="text" id="testAlertSubject" placeholder="PowerPulse Test Alert" />
+              </div>
+              <div class="form-group">
+                <label for="testAlertMessage">Message:</label>
+                <textarea id="testAlertMessage" rows="3" placeholder="This is a test alert..."></textarea>
+              </div>
+              <button type="submit" class="action-btn test-alert-btn"><i class="fas fa-paper-plane"></i> Send Test Alert</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="/public/js/dashboard.js"></script>
+  <script src="/public/js/chatbot.js"></script>
+</body>
+
+</html>
