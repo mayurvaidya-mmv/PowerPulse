@@ -15,7 +15,7 @@
 [![Award](https://img.shields.io/badge/🏆_Award-Consolation_Prize_·_M--Pulse_2026-gold?style=flat-square)](https://pesmodern.edu.in/)
 [![SDG 7](https://img.shields.io/badge/UN_SDG-7_·_9_·_11_·_13-yellow?style=flat-square)](https://sdgs.un.org/goals/goal7)
 
-[![GitHub Stars](https://img.shields.io/github/stars/mayurvaidya-mmv/PowerPulse)]
+![GitHub Stars](https://img.shields.io/github/stars/mayurvaidya-mmv/PowerPulse)
 > Real-time dual-source energy monitoring, AI-powered audit reports, and automated alerting — deployed live on campus infrastructure via AWS.
 
 🎥 **[Watch Demo](#-demo)** · 📸 **[Screenshots](#-dashboard--screenshots)** · ☁️ **[Architecture](#-cloud-architecture)** · 📄 **[Publication](#-research-publication)**
