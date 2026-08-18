@@ -211,7 +211,12 @@ Long-range trend plots for any electrical parameter across any custom date windo
 
 > 📹 **[Watch Full System Demo](./assets/demo.mp4)**
 
-Covers: live RS-485 → AWS data flow · source switching · AI chatbot · audit report generation · SNS alert delivery · PDF export
+## 🎥 Demo
+
+<video src="https://github.com/mayurvaidya-mmv/PowerPulse/releases#release-demo-video" controls width="100%"></video>
+
+> Covers: live RS-485 → AWS data flow · source switching · AI chatbot · audit report generation · SNS alert delivery · PDF export
+
 
 ---
 
