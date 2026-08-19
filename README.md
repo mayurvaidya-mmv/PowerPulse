@@ -45,32 +45,12 @@ PowerPulse connects both meters to a cloud-native dashboard that gives operation
 ## System Architecture
 
 ```
-  Secure Elite 440 ─┐
-  (Grid / MSEDCL)   │  RS-485 Modbus RTU     ┌─────────────────┐     MQTT/TLS
-                    ├─────────────────────── ▶│ Teltonika TRB245│──────────────▶ AWS IoT Core
-  Secure Elite 300 ─┘  9600 bps, daisy-chain  │ IoT Gateway     │
-  (Diesel Generator)                           └─────────────────┘
-                                                                          │
-                                    ┌─────────────────────────────────────┤
-                                    │         AWS Cloud                   │
-                              Rules Engine                                │
-                              ┌─────┴──────┐                              │
-                         DynamoDB       Lambda ──▶ SNS (Email/SMS alerts) │
-                              └─────┬──────┘                              │
-                                    │                                     │
-                              Node.js/Express (EC2)                       │
-                              REST API + WebSocket                        │
-                                    │                                     │
-                              Amazon Bedrock ◀───────────────────────────┘
-                              (AI Analysis)
-                                    │
-                              S3 + CloudFront + Route53
-                                    │
-                              ┌─────▼──────────────────┐
-                              │   Web Dashboard         │
-                              │   Chart.js · HTML/CSS   │
-                              │   Grid  │  Generator    │
-                              └─────────────────────────┘
+**Hardware & Data Flow**
+![System Architecture](./assets/system-architecture.png)
+
+**Cloud Architecture**
+![Cloud Architecture](./assets/cloud-architecture.png)
+
 ```
 
 ---
