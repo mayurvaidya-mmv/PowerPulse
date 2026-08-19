@@ -44,14 +44,13 @@ PowerPulse connects both meters to a cloud-native dashboard that gives operation
 
 ## System Architecture
 
-```
+
 **Hardware & Data Flow**
 ![System Architecture](./assets/system-architecture.png)
 
 **Cloud Architecture**
 ![Cloud Architecture](./assets/cloud-architecture.png)
 
-```
 
 ---
 
