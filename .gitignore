@@ -1,2 +1,56 @@
-.pm2/ 
-node_modules/ 
+# ==============================
+# Dependencies
+# ==============================
+node_modules/
+.npm/
+
+# ==============================
+# Environment & Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# Application secrets/config
+powerpulse/config/settings.json
+
+# ==============================
+# SSH / Local system files
+# ==============================
+.ssh/
+.bashrc
+.bash_profile
+.bash_logout
+
+# ==============================
+# PM2
+# ==============================
+.pm2/
+
+# ==============================
+# Logs
+# ==============================
+*.log
+logs/
+
+# ==============================
+# Deployment artifacts
+# ==============================
+*.zip
+*.tar.gz
+
+# ==============================
+# OS / IDE files
+# ==============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ==============================
+# AWS helper scripts
+# ==============================
+fix_sg.sh
+
+# Old local backup - do not commit
+powerpulse-old/

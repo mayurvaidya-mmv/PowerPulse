@@ -7,7 +7,6 @@ const __dirname = path.dirname(__filename);
 const SETTINGS_PATH = path.join(__dirname, "..", "config", "settings.json");
 
 // Fallback hardcoded key (used if settings file has no key)
-const FALLBACK_BEARER_TOKEN = "ABSKQmVkcm9ja0FQSUtleS13cXB3LWF0LTU1OTA1MDI0NTU4NjpjQWNnSG9tOUo0azZ5NVdNcU5tZUpuVElkc2QydG9YN2ZpTVZtRDBSQm05LzlXcUpxLzJOYWJsYnJEVT0=";
 
 function getAIConfig() {
   try {
@@ -23,8 +22,8 @@ function getAIConfig() {
 
     return {
       provider,
-      bedrockKey: settings.ai?.bedrockApiKey || FALLBACK_BEARER_TOKEN,
-      openaiKey: settings.ai?.openaiApiKey || "",
+      bedrockKey: settings.ai?.bedrockApiKey || process.env.BEDROCK_API_KEY || "",
+      openaiKey: settings.ai?.openaiApiKey || process.env.OPENAI_API_KEY || "",
       modelId,
       maxTokens: settings.ai?.maxTokens || 1000,
       temperature: settings.ai?.temperature ?? 0.4,

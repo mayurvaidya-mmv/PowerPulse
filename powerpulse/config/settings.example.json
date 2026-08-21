@@ -1,0 +1,38 @@
+{
+  "general": {
+    "theme": "dark",
+    "refreshInterval": 30,
+    "sidebarCollapsed": false
+  },
+  "charts": {
+    "maxDataPoints": 20,
+    "yAxisMode": "auto",
+    "animation": false,
+    "showChartToolbar": true
+  },
+  "alerts": {
+    "voltageMin": 180,
+    "voltageMax": 250,
+    "currentMax": 100,
+    "pfMin": 0.8,
+    "thdMax": 10,
+    "cooldownSeconds": 300,
+    "custom": []
+  },
+  "ai": {
+    "bedrockApiKey": "",
+    "openaiApiKey": "",
+    "modelId": "meta.llama3-70b-instruct-v1:0",
+    "maxTokens": 1920,
+    "temperature": 0.4
+  },
+  "reports": {
+    "companyName": "PowerPulse",
+    "electricityRate": 8,
+    "currency": "₹",
+    "includeCost": true,
+    "kvahRate": 6,
+    "billingType": "kwh",
+    "includeKvah": true
+  }
+}
