@@ -16,7 +16,7 @@
 [![SDG 7](https://img.shields.io/badge/UN_SDG-7_·_9_·_11_·_13-yellow?style=flat-square)](https://sdgs.un.org/goals/goal7)
 
 <a href="https://github.com/mayurvaidya-mmv">
-  <img src="https://komarev.com/ghpvc/?username=mayurvaidya-mmv&base=30&style=flat-square&label=Profile%20Views" />
+  <img src="https://komarev.com/ghpvc/?username=mayurvaidya-mmv&base=30&style=flat-square&label=PowerPulse%20Views" />
 </a>
 
 ![GitHub Stars](https://img.shields.io/github/stars/mayurvaidya-mmv/PowerPulse)
