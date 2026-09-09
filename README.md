@@ -18,6 +18,7 @@
 <a href="https://github.com/mayurvaidya-mmv">
   <img src="https://komarev.com/ghpvc/?username=mayurvaidya-mmv&base=30&style=flat-square&label=Profile%20Views" />
 </a>
+
 ![GitHub Stars](https://img.shields.io/github/stars/mayurvaidya-mmv/PowerPulse)
 > Real-time dual-source energy monitoring, AI-powered audit reports, and automated alerting — deployed live on campus infrastructure via AWS.
 
