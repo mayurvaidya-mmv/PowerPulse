@@ -15,6 +15,9 @@
 [![Award](https://img.shields.io/badge/🏆_Award-Consolation_Prize_·_M--Pulse_2026-gold?style=flat-square)](https://pesmodern.edu.in/)
 [![SDG 7](https://img.shields.io/badge/UN_SDG-7_·_9_·_11_·_13-yellow?style=flat-square)](https://sdgs.un.org/goals/goal7)
 
+<a href="https://github.com/mayurvaidya-mmv">
+  <img src="https://komarev.com/ghpvc/?username=mayurvaidya-mmv&base=30&style=flat-square&label=Profile%20Views" />
+</a>
 ![GitHub Stars](https://img.shields.io/github/stars/mayurvaidya-mmv/PowerPulse)
 > Real-time dual-source energy monitoring, AI-powered audit reports, and automated alerting — deployed live on campus infrastructure via AWS.
 
